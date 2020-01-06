@@ -4,7 +4,7 @@ import ListItem from './ListItem';
 interface Props {
   list: any[];
   parent?: string;
-  active?: number;
+  activeIndex?: number;
 };
 
 const ListView: React.FC<Props> = (props) => (
@@ -12,7 +12,7 @@ const ListView: React.FC<Props> = (props) => (
     {props.list && props.list.map((item, k) => (
       <ListItem
         key={k}
-        isActive={k === props.active}
+        isActive={k === props.activeIndex}
         title={item.title}
         slug={item.slug}
       />
@@ -22,6 +22,6 @@ const ListView: React.FC<Props> = (props) => (
 
 ListView.defaultProps = {
   list: [],
-  active: 0
+  activeIndex: 0
 };
 export default ListView;
