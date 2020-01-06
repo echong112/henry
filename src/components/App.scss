@@ -1,12 +1,23 @@
 .ipod {
-  width: 310px;
-  height: 560px;
+  width: 320px;
+  height: 525px;
   margin: auto;
-  border: pink 2px dotted;
+  border: rgb(235, 235, 235) 2px solid;
+  margin-top: 50px;
+  border-radius: 25px;
 }
 
 .bezel {
   height: 40%;
+  padding: 20px 15px;
+
+  .screen {
+    width: 95%;
+    margin: auto;
+    border: black 3px solid;
+    height: 100%;
+    border-radius: 5px;
+  }
 }
 
 .controls {
