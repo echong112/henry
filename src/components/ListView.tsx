@@ -6,14 +6,12 @@ interface Props {
   parent: string;
 }
 
-const ListView: React.FC<Props> = (props) => {
-  return (
-    <div>
-      {props.list && props.list.map((item, k) => {
-        return <ListItem key={k} title="test" slug="test-slug" />
-      })}
-    </div>
-  );
-}
+const ListView: React.FC<Props> = (props) => (
+  <div>
+    {props.list && props.list.map((item, k) => (
+      <ListItem key={k} title={item.title} slug={item.slug} />
+    ))}
+  </div>
+);
 
 export default ListView;
