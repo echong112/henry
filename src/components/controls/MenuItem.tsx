@@ -1,5 +1,15 @@
 import React from 'react';
 // eslint-disable-next-line
 import { BrowserRouter as Router, Link, } from "react-router-dom";
-const MenuItem: React.FC = () => <Link to="/experience/wtf">WTF</Link>
+
+interface Props {
+  count: number;
+}
+const MenuItem: React.FC<Props> = (props) => {
+  console.log(props);
+  return (
+    <Link to="/experience/wtf">{'asdf'}</Link>
+  )
+}
+
 export default MenuItem;
