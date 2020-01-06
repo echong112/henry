@@ -9,7 +9,7 @@ interface Props {
 
 const MenuItem: React.FC<Props> = (props) => (
   <Link
-    className="menu-item active"
+    className="menu-item"
     to={`/${'experience'}/${props.slug}`}>{props.title}
   </Link>
 );
