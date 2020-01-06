@@ -3,7 +3,7 @@ import ListItem from './ListItem';
 
 interface Props {
   list: any[];
-  parent: string;
+  parent?: string;
 }
 
 const ListView: React.FC<Props> = (props) => (
