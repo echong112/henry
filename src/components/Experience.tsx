@@ -1,11 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, } from "react-router-dom";
+import MenuItem from './controls/MenuItem';
 
 const Experience: React.FC = () => {
   return (
     <div>
-      <h3>Experience</h3>
-      <Link to="/experience/wtf">WTF</Link>
+      <MenuItem />
     </div>
   )
 }
