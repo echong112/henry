@@ -1,11 +1,11 @@
 import React from 'react';
-import MenuItem from './controls/MenuItem';
+
+interface Props {
+}
 
 const ListView: React.FC = () => {
   return (
-    <ul>
-      <li><MenuItem title="test" slug="slug-test" /></li>
-    </ul>
+    <h3>List View</h3>
   );
 }
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Index from './Index';
-import Experience from './Experience';
-import Education from './Education';
-import Portfolio from './Portfolio';
-import Wheel from './controls/Wheel';
-import ListView from './ListView';
+import Index from './routes/Index';
+import Experience from './routes/Experience';
+import Education from './routes/Education';
+import Portfolio from './routes/Portfolio';
+
+import Wheel from './components/Wheel';
 
 import './App.scss';
 

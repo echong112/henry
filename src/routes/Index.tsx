@@ -1,5 +1,5 @@
 import React from 'react';
-import ListView from './ListView';
+import ListView from '../components/ListView';
 
 const Index: React.FC = () => {
   return (
