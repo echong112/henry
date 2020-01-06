@@ -1,8 +1,13 @@
 import React, { SyntheticEvent } from 'react';
 
 const Wheel: React.FC = () => {
-  const handleScroll = (event: SyntheticEvent) => {
-    console.log(event);
+  const handleScroll = (event: any) => {
+    if (event.nativeEvent.wheelDelta > 0) {
+      console.log('scroll up');
+    } else {
+      console.log('scroll down');
+    }
+
   };
 
   return (
