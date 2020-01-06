@@ -1,7 +1,3 @@
 import React from 'react';
-import ListView from '../components/ListView';
-import { mainList } from './routes';
-
-const Experience: React.FC = () => <ListView list={mainList} />
-
+const Experience: React.FC = () => <h3>Edu</h3>
 export default Experience;
