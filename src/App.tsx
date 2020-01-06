@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Index from './routes/Index';
-import Experience from './routes/Experience';
-import Education from './routes/Education';
 import Portfolio from './routes/Portfolio';
 import Controls from './components/Controls';
 
@@ -18,9 +16,9 @@ const App: React.FC = () => {
               <Switch>
                 <Route path="/" exact component={Index} />
                 <Route path="/experience/:slug" component={Portfolio} />
-                <Route path="/experience/" component={Experience} />
+                <Route path="/experience/" component={Portfolio} />
                 <Route path="/education/:slug" component={Portfolio} />
-                <Route path="/education" component={Education} />
+                <Route path="/education" component={Portfolio} />
                 <Route path="/portfolio/:slug" component={Portfolio} />
                 <Route path="/portfolio" component={Portfolio} />
               </Switch>
@@ -31,6 +29,6 @@ const App: React.FC = () => {
       </Router>
     </div>
   );
-}
+};
 
 export default App;

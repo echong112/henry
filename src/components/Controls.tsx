@@ -6,7 +6,7 @@ const Controls: React.FC = () => {
     <div className="controls">
       <Wheel />
     </div>
-  )
+  );
 }
 
 export default Controls;

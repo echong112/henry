@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Link, } from "react-router-dom";
 interface Props {
   title: string;
   slug: string;
-}
+};
 
 const MenuItem: React.FC<Props> = (props) => (
   <Link

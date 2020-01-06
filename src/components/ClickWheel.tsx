@@ -13,6 +13,6 @@ const Wheel: React.FC = () => {
     <div className="wheel" onWheel={handleScroll}>
     </div>
   );
-}
+};
 
 export default Wheel;
