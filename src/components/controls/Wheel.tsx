@@ -1,7 +1,13 @@
 import React from 'react';
 
 const Wheel: React.FC = () => {
-  return <h1>Wheel</h1>
+  return (
+    <div>
+      <div className="wheel">
+        Wheel HEre
+      </div>
+    </div>
+  )
 }
 
 export default Wheel;
