@@ -5,6 +5,7 @@ import Experience from './Experience';
 import Education from './Education';
 import Portfolio from './Portfolio';
 import Wheel from './controls/Wheel';
+import ListView from './ListView';
 
 import './App.scss';
 
