@@ -6,10 +6,6 @@ interface Props {
   title: string;
   slug: string;
 }
-const MenuItem: React.FC<Props> = (props) => {
-  return (
-    <Link to="/experience/wtf">{props.title}</Link>
-  )
-}
+const MenuItem: React.FC<Props> = (props) => <Link to="/experience/wtf">{props.title}</Link>
 
 export default MenuItem;

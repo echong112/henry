@@ -7,7 +7,11 @@ interface Props {
 
 const ListView: React.FC<Props> = (props) => {
   return (
-    <ListItem title="test" slug="test-slug" />
+    <div>
+      {props.list && props.list.map((item, k) => {
+        return <ListItem key={k} title="test" slug="test-slug" />
+      })}
+    </div>
   );
 }
 
