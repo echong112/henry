@@ -4,8 +4,7 @@ import Index from './routes/Index';
 import Experience from './routes/Experience';
 import Education from './routes/Education';
 import Portfolio from './routes/Portfolio';
-
-import Wheel from './components/ClickWheel';
+import Controls from './components/Controls';
 
 import './App.scss';
 
@@ -27,9 +26,7 @@ const App: React.FC = () => {
               </Switch>
             </div>
           </div>
-          <div className="controls">
-            <Wheel />
-          </div>
+          <Controls />
         </div>
       </Router>
     </div>
