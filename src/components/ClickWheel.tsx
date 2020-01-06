@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addOne, goDown } from '../actions';
 
 const Wheel: React.FC = () => {
+  const dispatch = useDispatch();
   const handleScroll = (event: any) => {
-    if (event.nativeEvent.wheelDelta > 0) {
-      console.log('scroll up');
-    } else {
-      console.log('scroll down');
-    }
+    dispatch(event.nativeEvent.wheelDelta > 0 ? addOne() : goDown());
   };
+  
+  useEffect(() => {
+    dispatch(addOne());
+  })
 
   return (
-    <div className="wheel" onWheel={handleScroll}>
+    <div className="wheel"
+      onWheel={handleScroll}>
     </div>
   );
 };
