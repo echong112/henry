@@ -5,11 +5,12 @@ import { BrowserRouter as Router, Link, } from "react-router-dom";
 interface Props {
   title: string;
   slug: string;
+  isActive: boolean;
 };
 
 const MenuItem: React.FC<Props> = (props) => (
   <Link
-    className="menu-item"
+    className={`menu-item ${props.isActive ? 'active' : ''}`}
     to={`/${'experience'}/${props.slug}`}>{props.title}
   </Link>
 );
