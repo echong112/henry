@@ -7,7 +7,6 @@ const Wheel: React.FC = () => {
     } else {
       console.log('scroll down');
     }
-
   };
 
   return (
