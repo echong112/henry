@@ -1,13 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-
-function Index() {
-  return <h2>Home</h2>;
-}
-
-function Product() {
-  return <h2>This is a page for product with ID </h2>;
-}
+import Index from './Index';
+import Product from './Product';
 
 const App: React.FC = () => {
   return (
