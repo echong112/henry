@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from 'react';
+import React from 'react';
 
 const Wheel: React.FC = () => {
   const handleScroll = (event: any) => {
