@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Index: React.FC = () => {
-  return <h1>Henry</h1>
+  return <h3>Henry</h3>
 }
 
 export default Index;

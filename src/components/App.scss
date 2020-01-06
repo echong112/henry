@@ -1,27 +1,21 @@
-
 .ipod {
-  width: 100%;
-  max-width: 300px;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
+  width: 310px;
+  height: 560px;
+  margin: auto;
   border: pink 2px dotted;
 }
 
-.screen {
-  border: red 2px dotted;
-  height: 250px;
+.bezel {
+  height: 40%;
 }
 
 .controls {
-  height: 250px
+  display: flex;
+  justify-content: space-around;
 }
 
-// 264 px
-
-// 500px
-
+.wheel {
+  margin: 50px auto;
+  background: pink;
+  border-radius: 50%;
+}
