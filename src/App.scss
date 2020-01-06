@@ -35,4 +35,9 @@
 
 .menu-item {
   display: block;
+
+  &.active {
+    background: blue;
+    color: white;
+  }
 }
