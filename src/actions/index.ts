@@ -1,4 +1,3 @@
-
 export const addOne = () => ({
   type: 'IS_UP',
   isUp: true

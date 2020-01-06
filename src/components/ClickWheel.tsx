@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addOne, goDown } from '../actions';
 
@@ -8,10 +8,6 @@ const Wheel: React.FC = () => {
     dispatch(event.nativeEvent.wheelDelta > 0 ? addOne() : goDown());
   };
   
-  useEffect(() => {
-    dispatch(addOne());
-  })
-
   return (
     <div className="wheel"
       onWheel={handleScroll}>
