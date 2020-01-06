@@ -4,7 +4,6 @@ import MenuItem from './controls/MenuItem';
 const Experience: React.FC = () => {
   return (
     <div>
-      <MenuItem count={2}/>
     </div>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react';
+import MenuItem from './controls/MenuItem';
 
 const Index: React.FC = () => {
   return (
     <ul>
-      <li>asdf</li>
+      <MenuItem count={2} title="Experience" slug="experience"/>
     </ul>
   )
 }

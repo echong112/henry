@@ -4,11 +4,12 @@ import { BrowserRouter as Router, Link, } from "react-router-dom";
 
 interface Props {
   count: number;
+  title: string;
+  slug: string;
 }
 const MenuItem: React.FC<Props> = (props) => {
-  console.log(props);
   return (
-    <Link to="/experience/wtf">{'asdf'}</Link>
+    <Link to="/experience/wtf">{props.title}</Link>
   )
 }
 

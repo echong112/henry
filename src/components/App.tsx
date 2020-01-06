@@ -4,7 +4,6 @@ import Index from './Index';
 import Experience from './Experience';
 import Education from './Education';
 import Portfolio from './Portfolio';
-import Cookie from './Cookie';
 import Wheel from './controls/Wheel';
 
 import './App.scss';
@@ -18,9 +17,9 @@ const App: React.FC = () => {
             <div className="screen">
               <Switch>
                 <Route path="/" exact component={Index} />
-                <Route path="/experience/:slug" component={Cookie} />
+                <Route path="/experience/:slug" component={Portfolio} />
                 <Route path="/experience/" component={Experience} />
-                <Route path="/education/:slug" component={Cookie} />
+                <Route path="/education/:slug" component={Portfolio} />
                 <Route path="/education" component={Education} />
                 <Route path="/portfolio/:slug" component={Portfolio} />
                 <Route path="/portfolio" component={Portfolio} />
