@@ -17,8 +17,8 @@ const Routes: React.FC = () => {
           <Route path="/experience/" component={Experience} />
           <Route path="/education/:slug" component={Cookie} />
           <Route path="/education" component={Education} />
-          <Route path="/portfolio" component={Portfolio} />
           <Route path="/portfolio/:slug" component={Portfolio} />
+          <Route path="/portfolio" component={Portfolio} />
         </Switch>
       </div>
     </div>
