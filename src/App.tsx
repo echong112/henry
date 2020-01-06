@@ -5,7 +5,7 @@ import Experience from './routes/Experience';
 import Education from './routes/Education';
 import Portfolio from './routes/Portfolio';
 
-import Wheel from './components/Wheel';
+import Wheel from './components/ClickWheel';
 
 import './App.scss';
 
