@@ -1,9 +1,9 @@
-export const addOne = () => ({
+export const scrollUp = () => ({
   type: 'IS_UP',
   isUp: true
 });
 
-export const goDown = () => ({
+export const scrollDown = () => ({
   type: 'IS_DOWN',
   isUp: false
 });

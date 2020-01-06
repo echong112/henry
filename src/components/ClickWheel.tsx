@@ -1,11 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addOne, goDown } from '../actions';
+import { scrollUp, scrollDown } from '../actions';
 
 const Wheel: React.FC = () => {
   const dispatch = useDispatch();
   const handleScroll = (event: any) => {
-    dispatch(event.nativeEvent.wheelDelta > 0 ? addOne() : goDown());
+    dispatch(event.nativeEvent.wheelDelta > 0 ? scrollUp() : scrollDown());
   };
   
   return (
