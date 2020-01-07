@@ -8,11 +8,7 @@ interface Props {
 };
 
 const ListView: React.FC<Props> = (props) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const isUp = useSelector((state: any) => {
-    console.log(state.isUp);
-    return state.isUp;
-  });
+  const isUp = useSelector((state: any) => state.isUp);
   
   return (
     <div>
