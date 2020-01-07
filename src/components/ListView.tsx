@@ -1,7 +1,6 @@
 import React from 'react';
 import ListItem from './ListItem';
 import { useSelector } from 'react-redux';
-
 interface Props {
   list: any[];
   parent?: string;
@@ -10,8 +9,10 @@ interface Props {
 const ListView: React.FC<Props> = (props) => {
   const activeIndex = useSelector((state: any) => {
     let active = state.activeIndex;
-    if (state.activeIndex >= props.list.length - 1) {
-      active = props.list.length - 1;
+    const max = props.list.length - 1;
+
+    if (state.activeIndex >= max) {
+      active = max;
     }
     return active;
   });

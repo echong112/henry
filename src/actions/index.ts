@@ -1,4 +1,5 @@
-let currIndex = 0
+let currIndex = 0;
+
 export const scrollUp = () => ({
   type: 'IS_UP',
   activeIndex: ++currIndex
