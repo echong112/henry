@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux'
 
 const activeIndex = (state = 0, action) => {
-  console.log(action);
   switch(action.type) {
     case 'IS_UP':
       return action.activeIndex;
