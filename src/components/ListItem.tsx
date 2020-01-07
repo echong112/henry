@@ -17,7 +17,17 @@ const MenuItem: React.FC<Props> = (props) => {
   useEffect(() => {
     if (clicked && props.isActive) {
       dispatch(unClick());
-      history.push("/experience");
+      let link = '/';
+      let parent = props.currItem.parent;
+      let slug = props.currItem.slug;
+
+      if (parent) {
+        link = `${parent}/${slug}`
+      } else {
+        link = slug
+      }
+
+      history.push(link);
     }
   }, [props, history, dispatch, clicked]);
   

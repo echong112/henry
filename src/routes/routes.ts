@@ -1,26 +1,26 @@
 export const mainList = [
   {
-    title: 'Title 1',
-    slug: 'slug-1',
+    title: 'Experience',
+    slug: 'experience',
   },
   {
-    title: 'Title 2',
-    slug: 'slug-2',
+    title: 'Education',
+    slug: 'education',
   },
   {
-    title: 'Title 3',
-    slug: 'slug-3',
+    title: 'Skills',
+    slug: 'skills',
   },
   {
-    title: 'Title 4',
-    slug: 'slug-4',
+    title: 'Portfolio',
+    slug: 'portfolio',
   },
   {
-    title: 'Title 5',
-    slug: 'slug-5',
+    title: 'Settings',
+    slug: 'extras',
   },
   {
-    title: 'Title 6',
-    slug: 'slug-6',
+    title: 'Extras',
+    slug: 'extras',
   }
 ];
