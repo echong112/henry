@@ -2,7 +2,7 @@ let currIndex = 0;
 let max = 3;
 export const scrollUp = () => ({
   type: 'IS_UP',
-  activeIndex: currIndex + 1 > max ? max : ++currIndex
+  activeIndex: ++currIndex
 });
 
 export const scrollDown = () => ({
@@ -12,7 +12,10 @@ export const scrollDown = () => ({
 
 // set max 
 
-export const setMax = (newMax: number) => ({
-  type: 'SET_MAX',
-  activeIndex: newMax
-})
+export const setMax = (newMax: number) => {
+  currIndex = newMax;
+  return ({
+    type: 'SET_MAX',
+    activeIndex: newMax
+  })
+}
