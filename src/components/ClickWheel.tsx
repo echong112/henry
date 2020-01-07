@@ -10,8 +10,10 @@ const Wheel: React.FC = () => {
   };
   
   return (
-    <div className="wheel"
-      onWheel={handleScroll}>
+    <div className="controls">
+      <div className="wheel"
+        onWheel={handleScroll}>
+      </div>
     </div>
   );
 };
