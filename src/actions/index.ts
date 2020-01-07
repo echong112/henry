@@ -7,5 +7,5 @@ export const scrollUp = () => ({
 
 export const scrollDown = () => ({
   type: 'IS_DOWN',
-  activeIndex: currIndex - 1 <= 0 ? 0 : --currIndex
+  activeIndex: --currIndex
 });

@@ -7,15 +7,7 @@ interface Props {
 };
 
 const ListView: React.FC<Props> = (props) => {
-  const activeIndex = useSelector((state: any) => {
-    let active = state.activeIndex;
-    const max = props.list.length - 1;
-
-    if (state.activeIndex >= max) {
-      active = max;
-    }
-    return active;
-  });
+  const activeIndex = useSelector((state: any) => state.activeIndex);
   
   return (
     <div>

@@ -6,6 +6,22 @@ export const mainList = [
   {
     title: 'Title 2',
     slug: 'slug-2',
+  },
+  {
+    title: 'Title 2',
+    slug: 'slug-2',
+  },
+  {
+    title: 'Title 2',
+    slug: 'slug-2',
+  },
+  {
+    title: 'Title 2',
+    slug: 'slug-2',
+  },
+  {
+    title: 'Title 2',
+    slug: 'slug-2',
   }
 ];
 
