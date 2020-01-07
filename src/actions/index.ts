@@ -18,3 +18,8 @@ export const clickWheel = () => ({
   type: 'CLICKED_WHEEL',
   clicked: true
 });
+
+export const unClick = () => ({
+  type: 'UNCLICKED',
+  clicked: false,
+})

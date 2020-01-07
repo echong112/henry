@@ -17,6 +17,8 @@ const clicked = (state = false, action) => {
   switch(action.type) {
     case 'CLICKED_WHEEL':
       return action.clicked;
+    case 'UNCLICKED':
+      return action.clicked;
     default:
       return state;
   }
