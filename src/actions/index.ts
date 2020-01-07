@@ -1,9 +1,10 @@
+let currCount = 0
 export const scrollUp = () => ({
   type: 'IS_UP',
-  isUp: true
+  isUp: ++currCount
 });
 
 export const scrollDown = () => ({
   type: 'IS_DOWN',
-  isUp: false
+  isUp: --currCount
 });

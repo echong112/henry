@@ -9,8 +9,8 @@ interface Props {
 
 const ListView: React.FC<Props> = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
-
   const isUp = useSelector((state: any) => {
+    console.log(state.isUp);
     return state.isUp;
   });
   
@@ -19,7 +19,7 @@ const ListView: React.FC<Props> = (props) => {
       {props.list && props.list.map((item, k) => (
         <ListItem
           key={k}
-          isActive={k === activeIndex}
+          isActive={k === isUp}
           title={item.title}
           slug={item.slug}
         />

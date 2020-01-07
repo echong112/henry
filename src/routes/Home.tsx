@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import ListView from '../components/ListView';
 import { mainList } from './routes';
 

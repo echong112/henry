@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-const isUp = (state = false, action) => {
+const isUp = (state = 0, action) => {
   switch(action.type) {
     case 'IS_UP':
       return action.isUp;
