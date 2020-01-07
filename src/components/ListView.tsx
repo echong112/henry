@@ -29,7 +29,7 @@ const ListView: React.FC<Props> = (props) => {
       dispatch(unClick());
     }
     console.log(clicked);
-  }, [activeIndex, dispatch, props, clicked]);
+  }, [activeIndex, dispatch, props, clicked, index]);
 
   return (
     <div>
