@@ -21,14 +21,10 @@ const ListView: React.FC<Props> = (props) => {
     } else {
       setIndex(activeIndex);
     }
+
     if (clicked) {
-      console.log(clicked);
-      // go to next
-      console.log(index);
-      // reset clciked in the actions / state
-      dispatch(unClick());
+      // dispatch(unClick());
     }
-    console.log(clicked);
   }, [activeIndex, dispatch, props, clicked, index]);
 
   return (
