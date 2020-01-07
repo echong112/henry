@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ListItem from './ListItem';
 import { useSelector } from 'react-redux';
 interface Props {
@@ -8,6 +8,10 @@ interface Props {
 
 const ListView: React.FC<Props> = (props) => {
   const activeIndex = useSelector((state: any) => state.activeIndex);
+
+  useEffect(() => {
+
+  });
   
   return (
     <div>

@@ -15,11 +15,6 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <Router>
-
-
-
-
-
         <Provider store={store}>
           <div className="ipod">
             <div className="bezel">
@@ -38,16 +33,6 @@ const App: React.FC = () => {
             <Controls />
           </div>
         </Provider>
-
-
-
-
-
-
-
-        
-
-
       </Router>
     </div>
   );
