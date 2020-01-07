@@ -6,6 +6,8 @@ const activeIndex = (state = 0, action) => {
       return action.activeIndex;
     case 'IS_DOWN': 
       return action.activeIndex;
+    case 'SET_MAX': 
+      return action.activeIndex;
     default: 
       return state;
   }

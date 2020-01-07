@@ -9,3 +9,10 @@ export const scrollDown = () => ({
   type: 'IS_DOWN',
   activeIndex: currIndex <= 0 ? 0 : --currIndex
 });
+
+// set max 
+
+export const setMax = (newMax: number) => ({
+  type: 'SET_MAX',
+  activeIndex: newMax
+})
