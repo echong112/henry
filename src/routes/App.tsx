@@ -2,10 +2,10 @@ import React from 'react';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from './routes/Home';
-import rootReducer from './reducers'
-import Portfolio from './routes/Portfolio';
-import Controls from './components/ClickWheel';
+import Home from './Home';
+import Portfolio from './Portfolio';
+import rootReducer from '../reducers'
+import Controls from '../components/ClickWheel';
 
 import './App.scss';
 
