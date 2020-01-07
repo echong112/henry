@@ -16,16 +16,12 @@ const MenuItem: React.FC<Props> = (props) => {
   const clicked = useSelector((state: any) => state.clicked);
 
   useEffect(() => {
-
     let link = '/';
     let parent = props.currItem.parent;
     let slug = props.currItem.slug;
 
-    if (parent) {
-      link = `${parent}/${slug}`
-    } else {
-      link = slug
-    }
+    link = parent ? `${parent}/${slug}` : slug
+
     setUrl(`/${link}`);
     if (clicked && props.isActive) {
       dispatch(unClick());
