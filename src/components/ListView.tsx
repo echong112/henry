@@ -10,10 +10,8 @@ interface Props {
 const ListView: React.FC<Props> = (props) => {
   const activeIndex = useSelector((state: any) => {
     let active = state.activeIndex;
-    if (state.activeIndex <= 0) {
-      active = 0;
-    } else if (state.activeIndex > props.list.length - 1) {
-      state.activeIndex = props.list.length - 1;
+    if (state.activeIndex >= props.list.length - 1) {
+      active = props.list.length - 1;
     }
     return active;
   });
