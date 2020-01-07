@@ -1,17 +1,17 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
 const activeIndex = (state = 0, action) => {
   switch(action.type) {
     case 'IS_UP':
       return action.activeIndex;
-    case 'IS_DOWN': 
+    case 'IS_DOWN':
       return action.activeIndex;
-    case 'SET_MAX': 
+    case 'SET_MAX':
       return action.activeIndex;
     default:
       return state;
   }
-}
+};
 
 const clicked = (state = false, action) => {
   switch(action.type) {
@@ -22,9 +22,9 @@ const clicked = (state = false, action) => {
     default:
       return state;
   }
-}
+};
 
 export default combineReducers({
   activeIndex,
   clicked
-})
+});
