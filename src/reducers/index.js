@@ -8,7 +8,7 @@ const activeIndex = (state = 0, action) => {
       return action.activeIndex;
     case 'SET_MAX': 
       return action.activeIndex;
-    default: 
+    default:
       return state;
   }
 }
