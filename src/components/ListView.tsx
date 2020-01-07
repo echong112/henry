@@ -1,22 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ListItem from './ListItem';
 import { useSelector } from 'react-redux';
 
 interface Props {
   list: any[];
   parent?: string;
-  activeIndex?: number;
 };
 
-
 const ListView: React.FC<Props> = (props) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const isUp = useSelector((state: any) => {
-    console.log(state.isUp);
-    if (state.isUp) {
-      console.log('isup');
-    } else {
-      console.log('isDown');
-    }
     return state.isUp;
   });
   
@@ -25,7 +19,7 @@ const ListView: React.FC<Props> = (props) => {
       {props.list && props.list.map((item, k) => (
         <ListItem
           key={k}
-          isActive={k === props.activeIndex}
+          isActive={k === activeIndex}
           title={item.title}
           slug={item.slug}
         />
@@ -35,8 +29,7 @@ const ListView: React.FC<Props> = (props) => {
 }
 
 ListView.defaultProps = {
-  list: [],
-  activeIndex: 0
+  list: []
 };
 
 export default ListView;
