@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ListItem from './ListItem';
 import { useSelector, useDispatch } from 'react-redux';
-import { setMax, unClick } from '../actions';
+import { setMax } from '../actions';
 
 interface Props {
   list: any[];
@@ -9,10 +9,9 @@ interface Props {
 };
 
 const ListView: React.FC<Props> = (props) => {
+  const dispatch = useDispatch();
   const [index, setIndex] = useState(0);
   const activeIndex = useSelector((state: any) => state.activeIndex);
-  const clicked = useSelector((state: any) => state.clicked);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     let max = props.list.length;
@@ -21,11 +20,7 @@ const ListView: React.FC<Props> = (props) => {
     } else {
       setIndex(activeIndex);
     }
-
-    if (clicked) {
-      // dispatch(unClick());
-    }
-  }, [activeIndex, dispatch, props, clicked, index]);
+  }, [activeIndex, dispatch, props]);
 
   return (
     <div>
