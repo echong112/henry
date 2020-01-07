@@ -18,13 +18,11 @@ const MenuItem: React.FC<Props> = (props) => {
   let history = useHistory();
 
   useEffect(() => {
-    const input = inputEl;
     if (clicked && props.isActive) {
-      console.log(input);
       dispatch(unClick());
       history.push("/experience");
     }
-  }, [props, clicked, dispatch, inputEl])
+  }, [props, clicked, dispatch])
   
   return (
     <Link ref={inputEl} className={`menu-item ${props.isActive ? 'active' : ''}`}
