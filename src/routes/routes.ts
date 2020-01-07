@@ -24,3 +24,32 @@ export const mainList = [
     slug: 'extras',
   }
 ];
+
+export const experienceList = [
+  {
+    title: 'VaynerMedia',
+    parent: 'experience',
+    slug: 'vaynermedia',
+  },
+  {
+    title: 'Warner Bros. Digital Lab',
+    parent: 'experience',
+    slug: 'warnerbros',
+  },
+  {
+    title: 'Blockchain Advisor',
+    parent: 'experience',
+    slug: 'blockchain',
+  },
+  {
+    title: 'Edelman',
+    parent: 'experience',
+    slug: 'edelman',
+  },
+  {
+    title: 'Freelancer',
+    parent: 'experience',
+    slug: 'freelancer',
+  }
+];
+

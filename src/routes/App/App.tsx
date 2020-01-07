@@ -7,6 +7,7 @@ import Home from '../Home';
 import Experience from '../Experience';
 import Education from '../Education';
 import Portfolio from '../Portfolio';
+import Skills from '../Skills';
 import Controls from '../../components/ClickWheel';
 import './App.scss';
 
@@ -28,6 +29,7 @@ const App: React.FC = () => {
                   <Route path="/education" component={Education} />
                   <Route path="/portfolio/:slug" component={Portfolio} />
                   <Route path="/portfolio" component={Portfolio} />
+                  <Route path="/skills" component={Skills} />
                 </Switch>
               </div>
             </div>
