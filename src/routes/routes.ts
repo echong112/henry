@@ -24,4 +24,3 @@ export const mainList = [
     slug: 'slug-6',
   }
 ];
-
