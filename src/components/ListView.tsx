@@ -27,9 +27,8 @@ const ListView: React.FC<Props> = (props) => {
       {props.list && props.list.map((item, k) => (
         <ListItem
           key={k}
+          currItem={item}
           isActive={k === index}
-          title={item.title}
-          slug={item.slug}
         />
       ))}
     </div>

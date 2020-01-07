@@ -5,8 +5,7 @@ import { useSelector, useDispatch} from 'react-redux';
 import { unClick } from '../actions';
 
 interface Props {
-  title: string;
-  slug: string;
+  currItem: any;
   isActive: boolean;
 };
 
@@ -24,7 +23,7 @@ const MenuItem: React.FC<Props> = (props) => {
   
   return (
     <Link className={`menu-item ${props.isActive ? 'active' : ''}`}
-      to={`/${'experience'}/${props.slug}`}>{props.title}
+      to={`/${'experience'}/${props.currItem.slug}`}>{props.currItem.title}
     </Link>
   );
 };
