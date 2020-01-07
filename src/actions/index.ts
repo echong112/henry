@@ -1,10 +1,15 @@
-let currCount = 0
+let currIndex = 0
 export const scrollUp = () => ({
   type: 'IS_UP',
-  isUp: ++currCount
+  activeIndex: ++currIndex
 });
 
 export const scrollDown = () => ({
   type: 'IS_DOWN',
-  isUp: --currCount
+  activeIndex: currIndex - 1 <= 0 ? 0 : --currIndex
 });
+
+export const setToZero = () => ({
+  type: 'ZERO',
+  activeIndex: 0
+})
