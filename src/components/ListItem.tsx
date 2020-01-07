@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 // eslint-disable-next-line
 import { BrowserRouter as Router, Link, useHistory} from "react-router-dom";
 import { useSelector, useDispatch} from 'react-redux';
@@ -11,25 +11,21 @@ interface Props {
 };
 
 const MenuItem: React.FC<Props> = (props) => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const clicked = useSelector((state: any) => state.clicked);
-  const inputEl = useRef(null);
-
-  let history = useHistory();
 
   useEffect(() => {
     if (clicked && props.isActive) {
       dispatch(unClick());
       history.push("/experience");
     }
-  }, [props, clicked, dispatch])
+  }, [props, history, dispatch, clicked]);
   
   return (
-    <Link ref={inputEl} className={`menu-item ${props.isActive ? 'active' : ''}`}
+    <Link className={`menu-item ${props.isActive ? 'active' : ''}`}
       to={`/${'experience'}/${props.slug}`}>{props.title}
     </Link>
   );
 };
-
-
 export default MenuItem;
