@@ -1,6 +1,6 @@
 import React from 'react';
 import ListView from '../components/ListView';
-import { mainList } from './routes';
+import { mainList } from './_routes';
 
 const Index: React.FC = () => {
   return (
