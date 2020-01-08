@@ -32,7 +32,7 @@ const App: React.FC = () => {
                   <TransitionGroup>
                     <CSSTransition
                       key={location.key}
-                      timeout={11450}
+                      timeout={4000}
                       classNames="slide"
                     >
                       <Switch>
