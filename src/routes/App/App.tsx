@@ -27,7 +27,6 @@ const App: React.FC = () => {
           <div className="ipod">
             <div className="bezel">
               <div className="screen">
-
                 <Route render={({location}) => (
                   <TransitionGroup>
                     <CSSTransition
@@ -45,7 +44,6 @@ const App: React.FC = () => {
                     </CSSTransition>
                   </TransitionGroup>
                 )} />
-
               </div>
             </div>
             <Controls />
