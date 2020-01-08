@@ -3,6 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from '../../reducers';
+
+import {
+  CSSTransition,
+  TransitionGroup,
+} from 'react-transition-group';
+
 import Home from '../Home';
 import Experience from '../Experience';
 import Education from '../Education';
@@ -21,16 +27,25 @@ const App: React.FC = () => {
           <div className="ipod">
             <div className="bezel">
               <div className="screen">
-                <Switch>
-                  <Route path="/" exact component={Home} />
-                  <Route path="/experience/:slug" component={Experience} />
-                  <Route path="/experience/" component={Experience} />
-                  <Route path="/education/:slug" component={Education} />
-                  <Route path="/education" component={Education} />
-                  <Route path="/portfolio/:slug" component={Portfolio} />
-                  <Route path="/portfolio" component={Portfolio} />
-                  <Route path="/skills" component={Skills} />
-                </Switch>
+
+                <Route render={({location}) => (
+                  <TransitionGroup>
+                    <CSSTransition
+                      key={location.key}
+                      timeout={11450}
+                      classNames="slide"
+                    >
+                      <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/education" component={Education} />
+                        <Route path="/experience/" component={Experience} />
+                        <Route path="/portfolio" component={Portfolio} />
+                        <Route path="/skills" component={Skills} />
+                      </Switch>
+                    </CSSTransition>
+                  </TransitionGroup>
+                )} />
+
               </div>
             </div>
             <Controls />
