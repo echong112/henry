@@ -11,17 +11,13 @@ import { unclickMenuButton } from '../actions';
 
 const Screen: React.FC = () => {
   const dispatch = useDispatch();
-
-  const activeIndex = useSelector((state: any) => {
-    return state.menuClicked;
-  });
+  const activeIndex = useSelector((state: any) => state.menuClicked);
 
   useEffect(() => {
     if (activeIndex) {
-      console.log('wtf');
       dispatch(unclickMenuButton());
     }
-  }, [activeIndex]);
+  }, [activeIndex, dispatch]);
 
   return (
     <div className="bezel">
