@@ -23,3 +23,12 @@ export const unClick = () => ({
   type: 'UNCLICKED',
   clicked: false,
 })
+
+export const clickMenuButton = () => ({
+  type: 'MENU_BUTTON_CLICKED',
+  menuClicked: true,
+})
+export const unclickMenuButton = () => ({
+  type: 'MENU_BUTTON_UNCLICKED',
+  menuClicked: false,
+})

@@ -24,7 +24,19 @@ const clicked = (state = false, action) => {
   }
 };
 
+const menuClicked = (state = false, action) => {
+  switch(action.type) {
+    case 'MENU_BUTTON_CLICKED':
+      return action.menuClicked;
+    case 'MENU_BUTTON_UNCLICKED':
+      return action.menuClicked;
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
   activeIndex,
-  clicked
+  clicked,
+  menuClicked
 });
