@@ -20,7 +20,7 @@ const Screen: React.FC = (props) => {
       dispatch(unclickMenuButton());
       if (myLoc.pathname.length > 1) history.goBack();
     }
-  }, [menuClicked, dispatch, myLoc]);
+  }, [menuClicked, dispatch, myLoc, history]);
 
   return (
     <div className="bezel">

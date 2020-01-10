@@ -4,25 +4,54 @@ import { clickMenuButton, clickWheel, scrolled } from '../actions';
 
 const Wheel: React.FC = () => {
   const dispatch = useDispatch();
-  const menuClicked = () => dispatch(clickMenuButton())
-  const handleWheelClick = () => dispatch(clickWheel());
-  const handleScroll = (e: any) => dispatch(scrolled(e.nativeEvent.wheelDelta));
 
-  const keyboardFunction = useCallback((event: any) => {
+  const menuClicked = useCallback(() => {
+    dispatch(clickMenuButton());
+  }, [dispatch]);
+  const handleWheelClick = useCallback(() => {
+    dispatch(clickWheel());
+  }, [dispatch]);
+  const handleScroll = useCallback((e: any) => {
+    dispatch(scrolled(e.nativeEvent.wheelDelta));
+  }, [dispatch]);
+
+  const upKey = useCallback((event: any) => {
     switch(event.keyCode) {
       case 38 : handleScroll({nativeEvent: { wheelDelta: 1}}); break;// up = scroll up
+    }
+  }, [handleScroll]);
+
+
+  const downKey = useCallback((event: any) => {
+    switch(event.keyCode) {
       case 40 : handleScroll({nativeEvent: { wheelDelta: -1}}); break;// down = scroll down
+    }
+  }, [handleScroll]);
+
+  const leftKey = useCallback((event: any) => {
+    switch(event.keyCode) {
       case 37 : menuClicked(); break;// left = menu
+    }
+  }, [menuClicked]);
+
+  const rightKey = useCallback((event: any) => {
+    switch(event.keyCode) {
       case 39 : handleWheelClick(); break; // right = click
     }
-  }, []);
+  }, [handleWheelClick]);
   
   useEffect(() => {
-    document.addEventListener("keydown", keyboardFunction, false);
+    document.addEventListener("keydown", upKey, false);
+    document.addEventListener("keydown", downKey, false);
+    document.addEventListener("keydown", leftKey, false);
+    document.addEventListener("keydown", rightKey, false);
     return () => {
-      document.removeEventListener("keydown", keyboardFunction, false);
+      document.removeEventListener("keydown", upKey, false);
+      document.removeEventListener("keydown", downKey, false);
+      document.removeEventListener("keydown", leftKey, false);
+      document.removeEventListener("keydown", rightKey, false);
     };
-  }, []);
+  }, [upKey, downKey, leftKey, rightKey]);
 
   return (
     <div className="controls">
