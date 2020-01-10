@@ -1,5 +1,9 @@
 import React from 'react';
 
-const Skills: React.FC = () => <h3>Skills</h3>;
+const Skills: React.FC = () => (
+  <div className="page">
+    <h3>Skills</h3>
+  </div>
+)
 
 export default Skills;

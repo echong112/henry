@@ -4,7 +4,7 @@ import { mainList } from './_routes';
 
 const Index: React.FC = () => {
   return (
-    <div className="">
+    <div className="page">
       <ListView list={mainList} />
     </div>
   )

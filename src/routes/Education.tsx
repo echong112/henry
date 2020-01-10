@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Education: React.FC = () => (
-  <h3>Education</h3>
+  <div className="page">
+    <h3>Education</h3>
+  </div>
 );
 
 export default Education;

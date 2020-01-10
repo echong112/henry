@@ -17,6 +17,7 @@
     border: black 3px solid;
     height: 100%;
     border-radius: 5px;
+    position: relative;
   }
 }
 
@@ -75,4 +76,11 @@ polygon:hover {
   &:hover {
     background: green;
   }
+}
+
+
+.page {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
 }
