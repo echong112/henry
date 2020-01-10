@@ -17,7 +17,6 @@ const Screen: React.FC = (props) => {
   const isBack = useSelector((state: any) => state.isBack);
 
   useEffect(() => {
-    console.log(isBack);
     if (menuClicked) {
       dispatch(unclickMenuButton());
       if (myLoc.pathname.length > 1) {

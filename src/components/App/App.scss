@@ -115,7 +115,7 @@ polygon:hover {
 .back-fade-exit {
   right: 100%;
   &-active {
-    animation: exit2 1s ease-in-out;
+    animation: back-exit 1s ease-in-out;
     background-color: pink;
   }
 }
@@ -124,19 +124,19 @@ polygon:hover {
   right: 0;
   &-active {
     background-color: yellow;
-    animation: enter2 1s ease-in-out;
+    animation: back-enter 1s ease-in-out;
   }
   &-done {
-    animation: enter2 1s ease-in-out;
+    animation: back-enter 1s ease-in-out;
   }
 }
 
 
-@keyframes exit2 {
+@keyframes back-exit {
   0% { right: 0; }
   100% { right: -100%; }
 }
-@keyframes enter2 {
+@keyframes back-enter {
   0% { right: 100%;}
   100% { right: 0; }
 }
