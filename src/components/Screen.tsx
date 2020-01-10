@@ -7,20 +7,25 @@ import Experience from '../routes/Experience';
 import Education from '../routes/Education';
 import Portfolio from '../routes/Portfolio';
 import Skills from '../routes/Skills';
-import { unclickMenuButton } from '../actions';
+import { unclickMenuButton, setIsBack } from '../actions';
 
 const Screen: React.FC = (props) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const myLoc = useLocation();
   const menuClicked = useSelector((state: any) => state.menuClicked);
+  const isBack = useSelector((state: any) => state.isBack);
 
   useEffect(() => {
+    console.log(isBack);
     if (menuClicked) {
       dispatch(unclickMenuButton());
-      if (myLoc.pathname.length > 1) history.goBack();
+      if (myLoc.pathname.length > 1) {
+        history.goBack();
+        dispatch(setIsBack());
+      }
     }
-  }, [menuClicked, dispatch, myLoc, history]);
+  }, [menuClicked, dispatch, myLoc, history, isBack]);
 
   return (
     <div className="bezel">
@@ -30,7 +35,7 @@ const Screen: React.FC = (props) => {
           <CSSTransition
             key={location.key}
             timeout={1000}
-            classNames="fade">
+            classNames={isBack ? 'back-fade' : 'fade'}>
             <Switch location={location}>
               <Route path="/" exact component={Home} />
               <Route path="/education" component={Education} />

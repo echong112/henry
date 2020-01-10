@@ -87,26 +87,56 @@ polygon:hover {
 .fade-exit {
   right: 100%;
   &-active {
-    background: green;
-    animation: run 1s ease-in-out;
+    animation: exit 1s ease-in-out;
+    background-color: pink;
   }
 }
 
 .fade-enter {
-  right: -100%;
+  right: 0;
   &-active {
-    animation: run2 1s ease-in-out;
+    background-color: yellow;
+    animation: enter 1s ease-in-out;
   }
   &-done {
-    animation: run2 1s ease-in-out;
+    animation: enter 1s ease-in-out;
   }
 }
 
-@keyframes run {
+@keyframes exit {
   0% { right: 0;}
   100% { right: 100%;}
 }
-@keyframes run2 {
-  0% { right: -100%;}
-  100% { right: 0;}
+@keyframes enter {
+  0% { right: -100%; }
+  100% { right: 0; }
+}
+
+.back-fade-exit {
+  right: 100%;
+  &-active {
+    animation: exit2 1s ease-in-out;
+    background-color: pink;
+  }
+}
+
+.back-fade-enter {
+  right: 0;
+  &-active {
+    background-color: yellow;
+    animation: enter2 1s ease-in-out;
+  }
+  &-done {
+    animation: enter2 1s ease-in-out;
+  }
+}
+
+
+@keyframes exit2 {
+  0% { right: 0; }
+  100% { right: -100%; }
+}
+@keyframes enter2 {
+  0% { right: 100%;}
+  100% { right: 0; }
 }

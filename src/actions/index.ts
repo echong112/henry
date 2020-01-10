@@ -29,3 +29,11 @@ export const unclickMenuButton = () => ({
   type: 'MENU_BUTTON_UNCLICKED',
   menuClicked: false,
 })
+export const setIsBack = () => ({
+  type: 'IS_BACK',
+  isBack: true,
+})
+export const unsetIsBack = () => ({
+  type: 'IS_BACK',
+  isBack: false,
+})

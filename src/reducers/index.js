@@ -33,8 +33,18 @@ const menuClicked = (state = false, action) => {
   }
 };
 
+const isBack = (state = false, action) => {
+  switch(action.type) {
+    case 'IS_BACK':
+      return action.isBack;
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
   activeIndex,
   clicked,
-  menuClicked
+  menuClicked,
+  isBack
 });
