@@ -14,12 +14,12 @@ const Wheel: React.FC = () => {
     <div className="controls">
       <div className="wheel" onWheel={handleScroll}>
         <div className="clicker" onClick={handleWheelClick}></div>
-        <div className='square'>
+        <div className='clicker-buttons'>
           <svg viewBox='0 0 100 100'>
-            <polygon onClick={menuClicked} points='0,0 50,50 95,0' />
-            <polygon points='0,0 50,50 0,95' />
-            <polygon points='5,100 50,50 95,100' />
-            <polygon points='100,5 50,50 100,95' />
+            <polygon onClick={menuClicked} points='0,0 50,50 100,0' />
+            <polygon points='0,0 50,50 0,100' />
+            <polygon points='0,100 50,50 100,100' />
+            <polygon points='100,0 50,50 100,100' />
           </svg>
         </div>
       </div>
