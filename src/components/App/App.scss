@@ -28,7 +28,12 @@
     }
   }
 }
-
+.status-bar {
+  top: 0;
+  width: 100%;
+  background: red;
+  z-index: 1;
+}
 .controls {
   display: flex;
   justify-content: space-around;

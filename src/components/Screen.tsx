@@ -29,24 +29,25 @@ const Screen: React.FC = (props) => {
   return (
     <div className="bezel">
       <div className="screen">
+        <div className="status-bar">Status bar</div>
         <div className="screen__overlay"></div>
-      <Route render={({location}) => (
-        <TransitionGroup>
-          <CSSTransition
-            key={location.key}
-            timeout={500}
-            classNames={isBack ? 'back-fade' : 'fade'}>
-            <Switch location={location}>
-              <Route path="/" exact component={Home} />
-              <Route path="/education" component={Education} />
-              <Route path="/experience/:exp" component={Skills} />
-              <Route path="/experience/" component={Experience} />
-              <Route path="/portfolio" component={Portfolio} />
-              <Route path="/skills" component={Skills} />
-            </Switch>
-          </CSSTransition>
-        </TransitionGroup>
-      )} />
+        <Route render={({location}) => (
+          <TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={500}
+              classNames={isBack ? 'back-fade' : 'fade'}>
+              <Switch location={location}>
+                <Route path="/" exact component={Home} />
+                <Route path="/education" component={Education} />
+                <Route path="/experience/:exp" component={Skills} />
+                <Route path="/experience/" component={Experience} />
+                <Route path="/portfolio" component={Portfolio} />
+                <Route path="/skills" component={Skills} />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        )} />
     </div>
   </div>
   )
