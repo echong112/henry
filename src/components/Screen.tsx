@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useHistory, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Home from '../routes/Home';
@@ -9,15 +9,20 @@ import Portfolio from '../routes/Portfolio';
 import Skills from '../routes/Skills';
 import { unclickMenuButton } from '../actions';
 
-const Screen: React.FC = () => {
+const Screen: React.FC = (props) => {
   const dispatch = useDispatch();
-  const activeIndex = useSelector((state: any) => state.menuClicked);
+  const history = useHistory();
+  const myLoc = useLocation();
+  const menuClicked = useSelector((state: any) => state.menuClicked);
 
   useEffect(() => {
-    if (activeIndex) {
+    if (menuClicked) {
       dispatch(unclickMenuButton());
+      if (myLoc.pathname.length > 1) {
+        history.goBack();
+      }
     }
-  }, [activeIndex, dispatch]);
+  }, [menuClicked, dispatch, myLoc]);
 
   return (
     <div className="bezel">

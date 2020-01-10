@@ -1,12 +1,11 @@
 import React from 'react';
-import { useHistory} from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import { clickWheel, scrolled } from '../actions';
-const Wheel: React.FC = () => {
-  const dispatch = useDispatch();
-  const history = useHistory();
+import { clickMenuButton, clickWheel, scrolled } from '../actions';
 
-  const menuClicked = () => history.goBack();
+const Wheel: React.FC = () => {
+  // Redux Functions
+  const dispatch = useDispatch();
+  const menuClicked = () => dispatch(clickMenuButton())
   const handleWheelClick = () => dispatch(clickWheel());
   const handleScroll = (e: any) => dispatch(scrolled(e.nativeEvent.wheelDelta));
 
