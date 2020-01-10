@@ -8,36 +8,29 @@ const Wheel: React.FC = () => {
   const menuClicked = useCallback(() => {
     dispatch(clickMenuButton());
   }, [dispatch]);
+
   const handleWheelClick = useCallback(() => {
     dispatch(clickWheel());
   }, [dispatch]);
+
   const handleScroll = useCallback((e: any) => {
     dispatch(scrolled(e.nativeEvent.wheelDelta));
   }, [dispatch]);
 
   const upKey = useCallback((event: any) => {
-    switch(event.keyCode) {
-      case 38 : handleScroll({nativeEvent: { wheelDelta: 1}}); break;// up = scroll up
-    }
+    if (event.keyCode === 38) handleScroll({nativeEvent: { wheelDelta: 1}}); // up
   }, [handleScroll]);
 
-
   const downKey = useCallback((event: any) => {
-    switch(event.keyCode) {
-      case 40 : handleScroll({nativeEvent: { wheelDelta: -1}}); break;// down = scroll down
-    }
+    if (event.keyCode === 40) handleScroll({nativeEvent: { wheelDelta: -1}}); // down
   }, [handleScroll]);
 
   const leftKey = useCallback((event: any) => {
-    switch(event.keyCode) {
-      case 37 : menuClicked(); break;// left = menu
-    }
+    if (event.keyCode === 37) menuClicked(); // left
   }, [menuClicked]);
 
   const rightKey = useCallback((event: any) => {
-    switch(event.keyCode) {
-      case 39 : handleWheelClick(); break; // right = click
-    }
+    if (event.keyCode === 39) handleWheelClick(); // right
   }, [handleWheelClick]);
   
   useEffect(() => {
