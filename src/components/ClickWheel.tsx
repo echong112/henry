@@ -19,32 +19,17 @@ const Wheel: React.FC = () => {
 
   const upKey = useCallback((event: any) => {
     if (event.keyCode === 38) handleScroll({nativeEvent: { wheelDelta: 1}}); // up
-  }, [handleScroll]);
-
-  const downKey = useCallback((event: any) => {
     if (event.keyCode === 40) handleScroll({nativeEvent: { wheelDelta: -1}}); // down
-  }, [handleScroll]);
-
-  const leftKey = useCallback((event: any) => {
     if (event.keyCode === 37) menuClicked(); // left
-  }, [menuClicked]);
-
-  const rightKey = useCallback((event: any) => {
     if (event.keyCode === 39) handleWheelClick(); // right
-  }, [handleWheelClick]);
+  }, [handleScroll, handleWheelClick, menuClicked]);
   
   useEffect(() => {
     document.addEventListener("keydown", upKey, false);
-    document.addEventListener("keydown", downKey, false);
-    document.addEventListener("keydown", leftKey, false);
-    document.addEventListener("keydown", rightKey, false);
     return () => {
       document.removeEventListener("keydown", upKey, false);
-      document.removeEventListener("keydown", downKey, false);
-      document.removeEventListener("keydown", leftKey, false);
-      document.removeEventListener("keydown", rightKey, false);
     };
-  }, [upKey, downKey, leftKey, rightKey]);
+  }, [upKey]);
 
   return (
     <div className="controls">
