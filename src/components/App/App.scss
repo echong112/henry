@@ -10,7 +10,6 @@
 .bezel {
   height: 40%;
   padding: 20px 15px;
-
   .screen {
     width: 95%;
     margin: auto;
@@ -18,6 +17,7 @@
     height: 100%;
     border-radius: 5px;
     position: relative;
+    overflow: hidden;
   }
 }
 
@@ -78,9 +78,35 @@ polygon:hover {
   }
 }
 
-
 .page {
   position: absolute;
   width: 100%;
   overflow: hidden;
+}
+
+.fade-exit {
+  right: 100%;
+  &-active {
+    background: green;
+    animation: run 1s ease-in-out;
+  }
+}
+
+.fade-enter {
+  right: -100%;
+  &-active {
+    animation: run2 1s ease-in-out;
+  }
+  &-done {
+    animation: run2 1s ease-in-out;
+  }
+}
+
+@keyframes run {
+  0% { right: 0;}
+  100% { right: 100%;}
+}
+@keyframes run2 {
+  0% { right: -100%;}
+  100% { right: 0;}
 }

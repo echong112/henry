@@ -29,7 +29,7 @@ const Screen: React.FC = (props) => {
         <TransitionGroup>
           <CSSTransition
             key={location.key}
-            timeout={450}
+            timeout={1000}
             classNames="fade">
             <Switch location={location}>
               <Route path="/" exact component={Home} />
