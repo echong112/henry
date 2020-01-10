@@ -87,7 +87,7 @@ polygon:hover {
 .fade-exit {
   right: 100%;
   &-active {
-    animation: exit 1s ease-in-out;
+    animation: exit .5s ease-in-out;
     background-color: pink;
   }
 }
@@ -96,10 +96,10 @@ polygon:hover {
   right: 0;
   &-active {
     background-color: yellow;
-    animation: enter 1s ease-in-out;
+    animation: enter .5s ease-in-out;
   }
   &-done {
-    animation: enter 1s ease-in-out;
+    animation: enter .5s ease-in-out;
   }
 }
 
@@ -115,7 +115,7 @@ polygon:hover {
 .back-fade-exit {
   right: 100%;
   &-active {
-    animation: back-exit 1s ease-in-out;
+    animation: back-exit .5s ease-in-out;
     background-color: pink;
   }
 }
@@ -124,10 +124,10 @@ polygon:hover {
   right: 0;
   &-active {
     background-color: yellow;
-    animation: back-enter 1s ease-in-out;
+    animation: back-enter .5s ease-in-out;
   }
   &-done {
-    animation: back-enter 1s ease-in-out;
+    animation: back-enter .5s ease-in-out;
   }
 }
 

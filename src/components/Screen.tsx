@@ -33,7 +33,7 @@ const Screen: React.FC = (props) => {
         <TransitionGroup>
           <CSSTransition
             key={location.key}
-            timeout={1000}
+            timeout={500}
             classNames={isBack ? 'back-fade' : 'fade'}>
             <Switch location={location}>
               <Route path="/" exact component={Home} />
