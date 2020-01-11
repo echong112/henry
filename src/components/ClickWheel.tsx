@@ -1,19 +1,26 @@
 import React, { useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
+
 import { clickMenuButton, clickWheel, scrolled, unsetIsBack } from '../actions';
 
 const Wheel: React.FC = () => {
   const dispatch = useDispatch();
   const menuClicked = useCallback(() => {
+    let a = new Audio('http://localhost:3000/ipodclick.mp3');
+    a.play();
     dispatch(clickMenuButton());
   }, [dispatch]);
 
   const handleWheelClick = useCallback(() => {
+    let a = new Audio('http://localhost:3000/ipodclick.mp3');
+    a.play();
     dispatch(unsetIsBack());
     dispatch(clickWheel());
   }, [dispatch]);
 
   const handleScroll = useCallback((e: any) => {
+    let a = new Audio('http://localhost:3000/ipodclick.mp3');
+    a.play();
     dispatch(scrolled(e.nativeEvent.wheelDelta));
   }, [dispatch]);
 
