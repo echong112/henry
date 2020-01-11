@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import battery from '../assets/img/battery-icon.png';
 
 const StatusBar: React.FC = () => {
 
@@ -7,7 +8,7 @@ const StatusBar: React.FC = () => {
     <div className="status-bar">
       <span className="status"></span>
       <span>{title}</span>
-      <span className="battery">Battery</span>
+      <span className="battery"><img src={battery} /></span>
     </div>
   )
 }
