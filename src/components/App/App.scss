@@ -5,6 +5,7 @@
   border: rgb(235, 235, 235) 2px solid;
   margin-top: 50px;
   border-radius: 25px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .bezel {
@@ -33,14 +34,13 @@
 .status-bar {
   top: 0;
   width: 100%;
-  background: red;
   z-index: 1;
   display: flex;
   text-align: center;
 
   & > span {
     width: 100% ;
-    border: pink 3px dashed;
+    border: pink 1px dashed;
 
     &.battery {
       text-align: right;
@@ -56,6 +56,7 @@
 
 .menu-item {
   display: block;
+  font-weight: bold;
 
   &.active {
     background: blue;
