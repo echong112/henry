@@ -10,33 +10,48 @@
 .bezel {
   height: 40%;
   padding: 20px 15px;
-  .screen {
-    width: 95%;
-    margin: auto;
-    border: black 3px solid;
-    height: 100%;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
+}
 
-    &__overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      z-index: 1;
-    }
+.screen {
+  width: 95%;
+  margin: auto;
+  border: black 3px solid;
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
   }
 }
+
 .status-bar {
   top: 0;
   width: 100%;
   background: red;
   z-index: 1;
+  display: flex;
+  text-align: center;
+
+  & > span {
+    width: 100% ;
+    border: pink 3px dashed;
+
+    &.battery {
+      text-align: right;
+    }
+    &.status {
+      text-align: left;
+    }
+  }
 }
 .controls {
   display: flex;
-  justify-content: space-around;
 }
 
 .menu-item {
@@ -143,7 +158,6 @@ polygon:hover {
     animation: back-enter .5s ease-in-out;
   }
 }
-
 
 @keyframes back-exit {
   0% { right: 0; }

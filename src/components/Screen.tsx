@@ -8,6 +8,7 @@ import Education from '../routes/Education';
 import Portfolio from '../routes/Portfolio';
 import Skills from '../routes/Skills';
 import { unclickMenuButton, setIsBack } from '../actions';
+import StatusBar from './StatusBar';
 
 const Screen: React.FC = (props) => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const Screen: React.FC = (props) => {
   return (
     <div className="bezel">
       <div className="screen">
-        <div className="status-bar">Status bar</div>
+        <StatusBar />
         <div className="screen__overlay"></div>
         <Route render={({location}) => (
           <TransitionGroup>

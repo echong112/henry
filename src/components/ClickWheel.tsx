@@ -1,11 +1,9 @@
 import React, { useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { clickMenuButton, clickWheel, scrolled, unsetIsBack } from '../actions';
 
 const Wheel: React.FC = () => {
   const dispatch = useDispatch();
-  const isBack = useSelector((state: any) => state.isBack);
-
   const menuClicked = useCallback(() => {
     dispatch(clickMenuButton());
   }, [dispatch]);
