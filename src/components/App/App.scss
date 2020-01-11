@@ -74,7 +74,7 @@
   width: 200px;
   overflow: hidden;
   border-radius: 50%;
-  border: green 3px solid;
+  background: rgb(228, 227, 227)
 }
 
 svg {
@@ -98,9 +98,9 @@ polygon:hover {
 
 .clicker {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  background: pink;
+  width: 60px;
+  height: 60px;
+  background: white;
   position: absolute;
   border-radius: 50%;
   top: 50%;
@@ -108,7 +108,7 @@ polygon:hover {
   transform: translate(-50%, -50%);
 
   &:hover {
-    background: green;
+    background: cornflowerblue;
   }
 }
 
