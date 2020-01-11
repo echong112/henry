@@ -37,10 +37,12 @@
   z-index: 1;
   display: flex;
   text-align: center;
+  background: rgb(221,221,221);
+  background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(215,215,215,1) 35%, rgba(242,242,242,1) 100%);
+
 
   & > span {
     width: 100% ;
-    border: pink 1px dashed;
 
     &.battery {
       text-align: right;
@@ -56,10 +58,12 @@
 
 .menu-item {
   display: block;
-  font-weight: bold;
-
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  padding-left: 5px;
   &.active {
-    background: blue;
+    background: rgb(3, 110, 233);
     color: white;
   }
 }
@@ -89,6 +93,7 @@ polygon:hover {
 .wheel {
   position: relative;
   cursor: pointer;
+  margin: auto;
 }
 
 .clicker {
@@ -117,14 +122,12 @@ polygon:hover {
   right: 100%;
   &-active {
     animation: exit .5s ease-in-out;
-    background-color: pink;
   }
 }
 
 .fade-enter {
   right: 0;
   &-active {
-    background-color: yellow;
     animation: enter .5s ease-in-out;
   }
   &-done {
@@ -152,7 +155,6 @@ polygon:hover {
 .back-fade-enter {
   right: 0;
   &-active {
-    background-color: yellow;
     animation: back-enter .5s ease-in-out;
   }
   &-done {
