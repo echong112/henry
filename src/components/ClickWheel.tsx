@@ -1,10 +1,11 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { clickMenuButton, clickWheel, scrolled, unsetIsBack } from '../actions';
 
 const Wheel: React.FC = () => {
-  const dispatch = useDispatch();
+  const [samples, setSamples] = useState([]);
   const mp3 = `${window.location.href}/ipodclick.mp3`;
+  const dispatch = useDispatch();
   let scrollWheel: any;
 
   const menuClicked = useCallback(() => {
@@ -33,27 +34,22 @@ const Wheel: React.FC = () => {
     if (event.keyCode === 39) handleWheelClick(); // right
   }, [handleScroll, handleWheelClick, menuClicked]);
 
-  const process_touchstart = (e: any) => {
-    console.log(e);
-    console.log(e.touches[0].pageX);
-  }
-  const process_touchend = () => {
-    console.log('touch end');
-  }
-  
+  // determine clockwise or counter clockwise
+  const process_touchstart = useCallback((e: any) => {
+    const currSamples = Object.assign([], samples);
+  },[samples]);
+
   useEffect(() => {
-    console.log(scrollWheel);
-    // determine clockwise or counter clockwise
     scrollWheel.addEventListener('touchmove', process_touchstart, false);
-    scrollWheel.addEventListener('touchend', process_touchend, false);
     document.addEventListener("keydown", upKey, false);
     return () => {
       document.removeEventListener("keydown", upKey, false);
     };
-  }, [upKey]);
+  }, [upKey, scrollWheel, process_touchstart]);
 
   return (
     <div className="controls">
+    {samples}
       <div className="wheel" ref={input => scrollWheel = input} onWheel={handleScroll}>
         <div className="clicker" onClick={handleWheelClick}></div>
         <div className='clicker-buttons'>
