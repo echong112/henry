@@ -8,7 +8,7 @@ const StatusBar: React.FC = () => {
     <div className="status-bar">
       <span className="status"></span>
       <span>{title}</span>
-      <span className="battery"><img src={battery} /></span>
+      <span className="battery"><img alt="battery" src={battery} /></span>
     </div>
   )
 }
