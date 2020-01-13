@@ -6,7 +6,6 @@ import prevButton from '../assets/img/prev.png';
 import playButton from '../assets/img/play.png';
 
 const Wheel: React.FC = () => {
-  console.log(window.location);
   const mp3 = `${window.location.origin}/ipodclick.mp3`;
   const dispatch = useDispatch();
 
