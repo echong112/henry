@@ -41,17 +41,27 @@ const Wheel: React.FC = () => {
   
   return (
     <div className="controls">
-      <div className="wheel"
-        onWheel={handleScroll}
-      >
+      <div className="wheel" onWheel={handleScroll}>
         <div className="clicker" onClick={handleWheelClick}></div>
         <div className='clicker-buttons'>
-          <svg viewBox='0 0 100 100'>
-            <polygon points='0,0 50,50 100,0' onClick={menuClicked} />
-            <polygon points='0,0 50,50 0,100' />
-            <polygon points='0,100 50,50 100,100' />
-            <polygon points='100,0 50,50 100,100' />
-          </svg>
+          <div className="square">
+            <div className="row">
+              <div onClick={menuClicked}>
+                <span>Menu</span>
+              </div>
+              <div>
+                <span className="next">Next</span>
+              </div>
+            </div>
+            <div className="row">
+              <div>
+                <span className="prev">Prev</span>
+              </div>
+              <div>
+                <span className="play">Play</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -108,6 +108,7 @@ polygon:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 
   &:hover {
     background: cornflowerblue;
@@ -172,10 +173,53 @@ polygon:hover {
   100% { right: 0; }
 }
 
-
 .battery {
   img {
     width: 25px;
     padding-right: 2px;
+  }
+}
+
+.square {
+  height: 200px;
+  background: pink;
+  transform: rotate(45deg);
+  cursor: pointer;
+
+  .row {
+    height: 100px;
+    display: flex;
+
+    & > div {
+      height: 100px;
+      width: 100px;
+      background: green;
+      border: pink 1px dashed;
+      position: relative;
+
+      & > span {
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        transform: rotate(-45deg);
+
+        &.prev {
+          top: 46%;
+          left: 32%;
+        }
+        &.next {
+          top: 35%;
+          left: 41%;
+        }
+        &.play {
+          top: 45%;
+          left: 40%;
+        }
+      }
+
+      &:hover {
+        background: pink;
+      }
+    }
   }
 }
