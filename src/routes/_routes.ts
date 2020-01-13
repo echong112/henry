@@ -253,3 +253,81 @@ export const jobs = [
     ],
   }
 ];
+
+export const portfolio = [
+  {
+    url: 'https://www.boomerang.com',
+    title: 'Boomerang.com',
+    tech: 'AngularJS, ES6, SASS, Jasmine + Karma, Jenkins'
+  },
+  {
+    url: 'https://www.dcuniverse.com',
+    title: 'DC Universe',
+    tech: 'Vue.js, ES6, SASS, Jasmine + Jest, Jenkins'
+  },
+  {
+    url: 'https://www.dramafever.com',
+    title: 'Dramafever',
+    tech: 'AngularJS, ES6, SASS, Jasmine + Karma, Jenkins'
+  },
+  {
+    url: 'https://secure.citi.com/brandcentral/',
+    title: 'Citi Brand Central',
+    tech: 'Jekyll, ES6, SASS'
+  },
+  {
+    url: 'https://www.citigroup.com/citi/about/',
+    title: 'Citi About Page',
+    tech: 'Jekyll, ES6, SASS'
+  },
+  {
+    url: 'http://emersoncollective.com/',
+    title: 'Emerson Collective',
+    tech: 'Episerver, C#, SASS, jQuery'
+  },
+  {
+    url: 'http://globalawardentry.com/ssu/',
+    title: 'XFinity Marketing Page',
+    tech: 'Jekyll, ES6, SASS'
+  },
+  {
+    url: 'http://globalawardentry.com/ssu/',
+    title: 'XFinity Marketing Page',
+    tech: 'Jekyll, ES6, SASS'
+  },
+  {
+    url: 'https://usa.beyblade.com/',
+    title: 'BeyBlade',
+    tech: 'WordPress, Bones, SASS'
+  },
+  {
+    url: 'http://blog.moto.com/',
+    title: 'Motorola Blog',
+    tech: 'WordPress, Bones, SASS'
+  },
+  {
+    url: 'http://www.abraxanepro.com/',
+    title: 'Abraxane Pro',
+    tech: 'WordPress, Bones, SASS, RSS Aggregator'
+  },
+  {
+    url: 'http://www.sfshibao.com/',
+    title: 'NYChaobao Chinese news site',
+    tech: 'WordPress, Bones, SASS, RSS Aggregator'
+  },
+  {
+    url: 'http://nychaobao.com/',
+    title: 'NYChaobao Chinese news site',
+    tech: 'WordPress, Bones, SASS, RSS Aggregator'
+  },
+  {
+    url: 'http://koreanhln.com/',
+    title: 'Korean Headline News',
+    tech: 'WordPress, Bones, SASS, RSS Aggregator'
+  },
+  {
+    url: 'http://goyow.com/',
+    title: 'Goyow Chinese news site',
+    tech: 'WordPress, Bones, SASS, RSS Aggregator'
+  },
+]
