@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setTitle } from '../actions';
 
 const Education: React.FC = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setTitle('Education'));
+  }, [])
   return (
     <div className="page">
       <h3>Education</h3>

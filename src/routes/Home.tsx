@@ -1,30 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setTitle } from '../actions';
 import ListView from '../components/ListView';
-const mainList = [
-  {
-    title: 'Experience',
-    slug: 'experience',
-  },
-  {
-    title: 'Education',
-    slug: 'education',
-  },
-  {
-    title: 'Skills',
-    slug: 'skills',
-  },
-  {
-    title: 'Portfolio',
-    slug: 'portfolio',
-  },
-  {
-    title: 'Extras',
-    slug: 'extras',
-  }
-];
-
+import { mainList } from './_routes';
 
 const Index: React.FC = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setTitle('iPod'));
+  }, [])
   return (
     <div className="page">
       <ListView list={mainList} />

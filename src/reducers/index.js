@@ -42,9 +42,19 @@ const isBack = (state = false, action) => {
   }
 };
 
+const title = (state = '', action) => {
+  switch(action.type) {
+    case 'TITLE_SET':
+      return action.title;
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   activeIndex,
   clicked,
   menuClicked,
-  isBack
+  isBack,
+  title
 });

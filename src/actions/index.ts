@@ -13,6 +13,12 @@ export const setActiveIndex = (index: number) => {
     activeIndex: index
   }
 }
+export const setTitle = (title: string) => {
+  return {
+    type: 'TITLE_SET',
+    title: title
+  }
+}
 export const setMax = (newMax: number) => {
   currIndex = newMax;
   return ({
