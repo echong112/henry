@@ -6,6 +6,7 @@ import Home from '../routes/Home';
 import Experience from '../routes/Experience';
 import Education from '../routes/Education';
 import Portfolio from '../routes/Portfolio';
+import Job from '../routes/Job';
 import Skills from '../routes/Skills';
 import { unclickMenuButton, setIsBack } from '../actions';
 import StatusBar from './StatusBar';
@@ -31,7 +32,7 @@ const Screen: React.FC = (props) => {
     <div className="bezel">
       <div className="screen">
         <StatusBar />
-        {/* <div className="screen__overlay"></div> */}
+        <div className="screen__overlay"></div>
         <Route render={({location}) => (
           <TransitionGroup>
             <CSSTransition
@@ -41,7 +42,7 @@ const Screen: React.FC = (props) => {
               <Switch location={location}>
                 <Route path="/" exact component={Home} />
                 <Route path="/education" component={Education} />
-                <Route path="/experience/:exp" component={Skills} />
+                <Route path="/experience/:exp" component={Job} />
                 <Route path="/experience/" component={Experience} />
                 <Route path="/portfolio" component={Portfolio} />
                 <Route path="/skills" component={Skills} />

@@ -1,11 +1,13 @@
 import React from 'react';
 import ListView from '../components/ListView';
-import { experienceList } from './_routes';
+import { jobs } from './_routes';
 
-const Index: React.FC = () => (
-  <div className="page">
-    <ListView list={experienceList} />
-  </div>
-)
+const Index: React.FC = () => {
+  return (
+    <div className="page">
+      <ListView list={jobs} />
+    </div>
+  )
+}
 
 export default Index;

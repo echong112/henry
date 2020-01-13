@@ -30,9 +30,26 @@ const MenuItem: React.FC<Props> = (props) => {
   }, [props, history, dispatch, clicked]);
   
   return (
-    <Link className={`menu-item ${props.isActive ? 'active' : ''}`}
-      to={url}>{props.currItem.title}
-    </Link>
+    <Link  className={`menu-item ${props.isActive ? 'active' : ''}`} to={{
+      pathname: url,
+      state: {
+        currentItem: props.currItem
+      }
+    }}>{props.currItem.title}</Link>
   );
 };
 export default MenuItem;
+
+
+/*
+<Link to={{
+  pathname: '/tylermcginnis',
+  state: {
+    fromNotifications: true
+  }
+}}>Tyler McGinnis</Link>
+
+    <Link className={`menu-item ${props.isActive ? 'active' : ''}`}
+      to={url}>{props.currItem.title}
+    </Link>
+*/
