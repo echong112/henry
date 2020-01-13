@@ -31,7 +31,7 @@ const Screen: React.FC = (props) => {
     <div className="bezel">
       <div className="screen">
         <StatusBar />
-        <div className="screen__overlay"></div>
+        {/* <div className="screen__overlay"></div> */}
         <Route render={({location}) => (
           <TransitionGroup>
             <CSSTransition
