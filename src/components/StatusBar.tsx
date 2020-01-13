@@ -13,7 +13,7 @@ const StatusBar: React.FC = () => {
   return (
     <div className="status-bar">
       <span className="status"></span>
-      <span>{title}</span>
+      <span className="status-bar__title">{title}</span>
       <span className="battery"><img alt="battery" src={battery} /></span>
     </div>
   )
