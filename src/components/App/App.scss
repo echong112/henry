@@ -86,19 +86,21 @@ table {
   z-index: 1;
   display: flex;
   text-align: center;
-  padding: 2px;
-  background: rgb(221,221,221);
-  background: linear-gradient(
-    0deg,
-    rgba(221,221,221,1) 0%,
-    rgba(215,215,215,1) 35%,
-    rgba(242,242,242,1) 100%);
-
+  padding: 5px 2px;
+  background: rgb(141,164,178);
+  background: linear-gradient(0deg, rgba(141,164,178,0.6839110644257703) 0%, rgba(206,221,243,1) 51%, rgba(211,226,248,1) 100%);
+  
+  
+  &__title {
+    font-weight: 900;
+    font-size: 16px;
+  }
   & > span {
     width: 100% ;
 
     &.battery {
       text-align: right;
+      padding-right: 2px;
     }
     &.status {
       text-align: left;
@@ -114,7 +116,13 @@ table {
   font-weight: 700;
   text-decoration: none;
   color: black;
-  padding-left: 5px;
+  padding: 4px 5px;
+
+  &::after {
+    content: '>';
+    position: absolute;
+    right: 5px;
+  }
 
   &.active {
     background: rgb(3, 110, 233);
@@ -170,7 +178,7 @@ polygon:hover {
 .page {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 85%;
   overflow: scroll;
   overflow-x: hidden;
 
