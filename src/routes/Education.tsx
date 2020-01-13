@@ -1,8 +1,13 @@
 import React from 'react';
-import Page from '../components/Page';
 
-const Education: React.FC = () => (
-  <Page title="Education"/>
-);
+const Education: React.FC = () => {
+  return (
+    <div className="page">
+      <h3>Education</h3>
+      <p>Rutgers University, New Brunswick</p>
+      <p>Major: Applied Economics</p>
+    </div>
+  )
+}
 
 export default Education;
