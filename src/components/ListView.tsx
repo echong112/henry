@@ -12,7 +12,7 @@ const ListView: React.FC<Props> = (props) => {
   const dispatch = useDispatch();
   const [index, setIndex] = useState(0);
   const activeIndex = useSelector((state: any) => state.activeIndex);
-
+  let currList: any;
   useEffect(() => {
     let max = props.list.length;
     if (activeIndex >= max) {
@@ -23,7 +23,7 @@ const ListView: React.FC<Props> = (props) => {
   }, [activeIndex, dispatch, props]);
 
   return (
-    <div>
+    <div ref={list => currList = list}>
       {props.list && props.list.map((item, k) => (
         <ListItem
           key={k}
