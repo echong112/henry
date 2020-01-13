@@ -1,6 +1,9 @@
 import React, { useEffect, useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { clickMenuButton, clickWheel, scrolled, unsetIsBack } from '../actions';
+import nextButton from '../assets/img/next.png';
+import prevButton from '../assets/img/prev.png';
+import playButton from '../assets/img/play.png';
 
 const Wheel: React.FC = () => {
   const mp3 = `${window.location.href}/ipodclick.mp3`;
@@ -50,15 +53,15 @@ const Wheel: React.FC = () => {
                 <span>Menu</span>
               </div>
               <div>
-                <span className="next">Next</span>
+                <span className="next"><img alt="next" src={nextButton} /></span>
               </div>
             </div>
             <div className="row">
               <div>
-                <span className="prev">Prev</span>
+                <span className="prev"><img alt="prev" src={prevButton} /></span>
               </div>
               <div>
-                <span className="play">Play</span>
+                <span className="play"><img alt="play" src={playButton} /></span>
               </div>
             </div>
           </div>

@@ -193,8 +193,7 @@ polygon:hover {
     & > div {
       height: 100px;
       width: 100px;
-      background: green;
-      border: pink 1px dashed;
+      background: rgb(175, 175, 175);
       position: relative;
 
       & > span {
@@ -202,23 +201,33 @@ polygon:hover {
         top: 30%;
         left: 25%;
         transform: rotate(-45deg);
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        font-size: 14px;
+
+        & > img {
+          width: 15px;
+          height: 10px;
+          position: absolute;
+        }
 
         &.prev {
-          top: 46%;
+          top: 60%;
           left: 32%;
         }
         &.next {
-          top: 35%;
-          left: 41%;
+          top: 38%;
+          left: 49%;
         }
         &.play {
-          top: 45%;
-          left: 40%;
+          top: 62%;
+          left: 50%;
         }
       }
 
       &:hover {
-        background: pink;
+        background: rgb(206, 206, 206);
       }
     }
   }
