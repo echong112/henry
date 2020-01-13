@@ -1,162 +1,3 @@
-export const mainList = [
-  {
-    title: 'Experience',
-    slug: 'experience',
-  },
-  {
-    title: 'Education',
-    slug: 'education',
-  },
-  {
-    title: 'Skills',
-    slug: 'skills',
-  },
-  {
-    title: 'Portfolio',
-    slug: 'portfolio',
-  },
-  {
-    title: 'Settings',
-    slug: 'extras',
-  },
-  {
-    title: 'Extras',
-    slug: 'extras',
-  }
-];
-
-export const skills = [
-  {
-    title: 'Web',
-    skills: ['HTML',
-    'CSS(3)',
-    'SASS/SCSS',
-    'JavaScript',
-    'jQuery',
-    'PHP'
-    ]
-  },
-  {
-    title: 'Code',
-    skills: ['TypeScript',
-    'ES6',
-    'Java',
-    ]
-  },
-  {
-    title: 'Database',
-    skills: [
-      'MSSQL',
-      'MYSQL',
-      'MongoDB'
-    ]
-  },
-  {
-    title: 'Server',
-    skills: [
-      'node',
-      'LAMP',
-      'Apache',
-      'Docker'
-    ]
-  },
-  {
-    title: 'Marketing',
-    skills: [
-      'Sailthru',
-      'HubSpot',
-      'Google Ads',
-      'Facebook Ads',
-      'YouTube Ads',
-      'SEO'
-    ]
-  },
-  {
-    title: 'Tools',
-    skills: [
-      'git',
-      'gulp',
-      'webpack',
-      'Visual Studio Code',
-      'XCode',
-      'Android Studio'
-    ]
-  },
-  {
-    title: 'Tools',
-    skills: [
-      'Adobe Photoshop',
-      'Adobe Illustrator',
-      'Microsoft Office',
-    ]
-  },
-  {
-    title: 'Analytics',
-    skills: [
-      'GTM',
-      'Segment.io',
-      'Optimizely',
-    ]
-  },
-  {
-    title: 'eCommerce',
-    skills: [
-      'Magento',
-      'OpenCart',
-      'Shopify',
-    ]
-  },
-  {
-    title: 'Coming soon...',
-    skills: [
-      'Apollo + GraphQL',
-      'Django',
-      'Kotlin',
-      'Python',
-    ]
-  },
-  {
-    title: 'JavaScript',
-    skills: [
-      'AngularJS',
-      'next.js',
-      'React',
-      'React Native',
-      'Redux',
-      'Vue',
-      'Vuex'
-    ]
-  },
-  {
-    title: 'CMS',
-    skills: [
-      'Drupal',
-      'Joomla',
-      'Prismic',
-      'WordPress',
-    ]
-  },
-  {
-    title: 'Testing',
-    skills: [
-      'Enzyme',
-      'Jasmine',
-      'Jest',
-      'Karma',
-    ]
-  },
-  {
-    title: 'Cloud',
-    skills: [
-      'AWS',
-      'Azure',
-      'Firebase',
-      'Google Cloud',
-      'Heroku',
-      'IBM Cloud',
-    ]
-  }
-];
 
 export const jobs = [
   {
@@ -254,80 +95,76 @@ export const jobs = [
   }
 ];
 
+
 export const portfolio = [
   {
     url: 'https://www.boomerang.com',
     title: 'Boomerang.com',
+    parent: 'portfolio',
+    slug: 'boomerang',
     tech: 'AngularJS, ES6, SASS, Jasmine + Karma, Jenkins'
   },
   {
     url: 'https://www.dcuniverse.com',
     title: 'DC Universe',
+    parent: 'portfolio',
+    slug: 'dcuniverse',
     tech: 'Vue.js, ES6, SASS, Jasmine + Jest, Jenkins'
   },
   {
     url: 'https://www.dramafever.com',
     title: 'Dramafever',
+    parent: 'portfolio',
+    slug: 'dramafever',
     tech: 'AngularJS, ES6, SASS, Jasmine + Karma, Jenkins'
   },
   {
     url: 'https://secure.citi.com/brandcentral/',
     title: 'Citi Brand Central',
+    parent: 'portfolio',
+    slug: 'citibrandcentral',
     tech: 'Jekyll, ES6, SASS'
   },
   {
     url: 'https://www.citigroup.com/citi/about/',
     title: 'Citi About Page',
+    parent: 'portfolio',
+    slug: 'citiabout',
     tech: 'Jekyll, ES6, SASS'
   },
   {
     url: 'http://emersoncollective.com/',
     title: 'Emerson Collective',
+    parent: 'portfolio',
+    slug: 'emerson',
     tech: 'Episerver, C#, SASS, jQuery'
   },
   {
     url: 'http://globalawardentry.com/ssu/',
     title: 'XFinity Marketing Page',
-    tech: 'Jekyll, ES6, SASS'
-  },
-  {
-    url: 'http://globalawardentry.com/ssu/',
-    title: 'XFinity Marketing Page',
+    parent: 'portfolio',
+    slug: 'xfinity',
     tech: 'Jekyll, ES6, SASS'
   },
   {
     url: 'https://usa.beyblade.com/',
     title: 'BeyBlade',
+    parent: 'portfolio',
+    slug: 'beyblade',
     tech: 'WordPress, Bones, SASS'
   },
   {
     url: 'http://blog.moto.com/',
     title: 'Motorola Blog',
+    parent: 'portfolio',
+    slug: 'moto',
     tech: 'WordPress, Bones, SASS'
   },
   {
     url: 'http://www.abraxanepro.com/',
     title: 'Abraxane Pro',
-    tech: 'WordPress, Bones, SASS, RSS Aggregator'
-  },
-  {
-    url: 'http://www.sfshibao.com/',
-    title: 'NYChaobao Chinese news site',
-    tech: 'WordPress, Bones, SASS, RSS Aggregator'
-  },
-  {
-    url: 'http://nychaobao.com/',
-    title: 'NYChaobao Chinese news site',
-    tech: 'WordPress, Bones, SASS, RSS Aggregator'
-  },
-  {
-    url: 'http://koreanhln.com/',
-    title: 'Korean Headline News',
-    tech: 'WordPress, Bones, SASS, RSS Aggregator'
-  },
-  {
-    url: 'http://goyow.com/',
-    title: 'Goyow Chinese news site',
+    parent: 'portfolio',
+    slug: 'abraxane',
     tech: 'WordPress, Bones, SASS, RSS Aggregator'
   },
 ]

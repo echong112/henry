@@ -6,6 +6,7 @@ import Home from '../routes/Home';
 import Experience from '../routes/Experience';
 import Education from '../routes/Education';
 import Portfolio from '../routes/Portfolio';
+import Work from '../routes/Work';
 import Job from '../routes/Job';
 import Skills from '../routes/Skills';
 import { unclickMenuButton, setIsBack } from '../actions';
@@ -44,6 +45,7 @@ const Screen: React.FC = (props) => {
                 <Route path="/education" component={Education} />
                 <Route path="/experience/:exp" component={Job} />
                 <Route path="/experience/" component={Experience} />
+                <Route path="/portfolio/:work" component={Work} />
                 <Route path="/portfolio" component={Portfolio} />
                 <Route path="/skills" component={Skills} />
               </Switch>

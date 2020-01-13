@@ -1,6 +1,28 @@
 import React from 'react';
 import ListView from '../components/ListView';
-import { mainList } from './_routes';
+const mainList = [
+  {
+    title: 'Experience',
+    slug: 'experience',
+  },
+  {
+    title: 'Education',
+    slug: 'education',
+  },
+  {
+    title: 'Skills',
+    slug: 'skills',
+  },
+  {
+    title: 'Portfolio',
+    slug: 'portfolio',
+  },
+  {
+    title: 'Extras',
+    slug: 'extras',
+  }
+];
+
 
 const Index: React.FC = () => {
   return (

@@ -23,6 +23,7 @@ const MenuItem: React.FC<Props> = (props) => {
     link = parent ? `${parent}/${slug}` : slug
 
     setUrl(`/${link}`);
+
     if (clicked && props.isActive) {
       dispatch(unClick());
       history.push(link);
@@ -30,7 +31,7 @@ const MenuItem: React.FC<Props> = (props) => {
   }, [props, history, dispatch, clicked]);
   
   return (
-    <Link  className={`menu-item ${props.isActive ? 'active' : ''}`} to={{
+    <Link className={`menu-item ${props.isActive ? 'active' : ''}`} to={{
       pathname: url,
       state: {
         currentItem: props.currItem
@@ -39,17 +40,3 @@ const MenuItem: React.FC<Props> = (props) => {
   );
 };
 export default MenuItem;
-
-
-/*
-<Link to={{
-  pathname: '/tylermcginnis',
-  state: {
-    fromNotifications: true
-  }
-}}>Tyler McGinnis</Link>
-
-    <Link className={`menu-item ${props.isActive ? 'active' : ''}`}
-      to={url}>{props.currItem.title}
-    </Link>
-*/
