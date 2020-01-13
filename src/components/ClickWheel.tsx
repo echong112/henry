@@ -49,20 +49,12 @@ const Wheel: React.FC = () => {
         <div className='clicker-buttons'>
           <div className="square">
             <div className="row">
-              <div onClick={menuClicked}>
-                <span>Menu</span>
-              </div>
-              <div>
-                <span className="next"><img alt="next" src={nextButton} /></span>
-              </div>
+              <div onClick={menuClicked}><span>Menu</span></div>
+              <div><span className="next"><img alt="next" src={nextButton} /></span></div>
             </div>
             <div className="row">
-              <div>
-                <span className="prev"><img alt="prev" src={prevButton} /></span>
-              </div>
-              <div>
-                <span className="play"><img alt="play" src={playButton} /></span>
-              </div>
+              <div><span className="prev"><img alt="prev" src={prevButton} /></span></div>
+              <div><span className="play"><img alt="play" src={playButton} /></span></div>
             </div>
           </div>
         </div>
