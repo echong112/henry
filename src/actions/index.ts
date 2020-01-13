@@ -6,6 +6,13 @@ export const scrolled = (delta: number) => {
     activeIndex: activeIndex
   }
 }
+
+export const setActiveIndex = (index: number) => {
+  return {
+    type: 'SCROLLED',
+    activeIndex: index
+  }
+}
 export const setMax = (newMax: number) => {
   currIndex = newMax;
   return ({

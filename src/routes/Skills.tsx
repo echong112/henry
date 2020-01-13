@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { skills } from './_routes';
-import { scrolled } from '../actions';
 
 const Skills: React.FC = () => {
-  const dispatch = useDispatch();
-  const [savedIndex, setSavedIndex] = useState(0);
   const activeIndex = useSelector((state: any) => state.activeIndex);
   let thisPage: any;
   useEffect(() => {
-    if (!savedIndex && activeIndex) setSavedIndex(activeIndex);
-    
     if (activeIndex && thisPage) thisPage.scrollTo(activeIndex, activeIndex * 10);
-
   }, [activeIndex]);
 
   return (

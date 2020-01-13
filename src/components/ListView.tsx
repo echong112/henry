@@ -13,12 +13,15 @@ const ListView: React.FC<Props> = (props) => {
   const [index, setIndex] = useState(0);
   const activeIndex = useSelector((state: any) => state.activeIndex);
   let currList: any;
+
   useEffect(() => {
     let max = props.list.length;
-    if (activeIndex >= max) {
-      dispatch(setMax(max));
-    } else {
-      setIndex(activeIndex);
+    if (currList) {
+      if (activeIndex >= max) {
+        dispatch(setMax(max));
+      } else {
+        setIndex(activeIndex);
+      }
     }
   }, [activeIndex, dispatch, props]);
 
