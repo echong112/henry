@@ -6,7 +6,7 @@ const Education: React.FC = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setTitle('Education'));
-  }, [])
+  }, [dispatch])
   return (
     <div className="page">
       <h3>Education</h3>

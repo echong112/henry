@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import battery from '../assets/img/battery-icon.png';
 
 const StatusBar: React.FC = () => {

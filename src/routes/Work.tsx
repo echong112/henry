@@ -10,7 +10,7 @@ const Work: React.FC = () => {
   let filtered = portfolio.filter((item, i) => item.slug === work)[0];
   useEffect(() => {
     dispatch(setTitle(filtered.title));
-  }, []);
+  }, [dispatch, filtered]);
   return (
     <div className="page">
       <h1>{filtered.title}</h1>

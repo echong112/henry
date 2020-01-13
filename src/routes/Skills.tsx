@@ -10,7 +10,7 @@ const Skills: React.FC = () => {
   useEffect(() => {
     dispatch(setTitle('Skills'));
     if (activeIndex && thisPage) thisPage.scrollTo(activeIndex, activeIndex * 10);
-  }, [activeIndex]);
+  }, [activeIndex, dispatch, thisPage]);
 
   return (
     <div className="page" ref={myPage => thisPage = myPage}>

@@ -10,7 +10,7 @@ const Job: React.FC = () => {
   let filtered = jobs.filter((item, i) => item.slug === exp)[0];
   useEffect(() => {
     dispatch(setTitle(filtered.title));
-  }, [])
+  }, [dispatch, filtered])
   return (
     <div className="page">
       <p>{filtered.jobTitle}</p>

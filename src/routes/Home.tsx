@@ -8,7 +8,7 @@ const Index: React.FC = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setTitle('iPod'));
-  }, [])
+  }, [dispatch])
   return (
     <div className="page">
       <ListView list={mainList} />

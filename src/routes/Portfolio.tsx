@@ -8,7 +8,7 @@ const Portfolio: React.FC = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setTitle('Portfolio'));
-  }, [])
+  }, [dispatch])
   return (
   <div className="page">
     <ListView list={portfolio} />
