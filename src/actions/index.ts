@@ -5,18 +5,10 @@ export const scrolled = (delta: number) => {
     activeIndex: activeIndex
   }
 }
-
 export const resetScroll = () => {
   return {
     type: 'SCROLLED',
     activeIndex: 0
-  }
-}
-
-export const setActiveIndex = (index: number) => {
-  return {
-    type: 'SCROLLED',
-    activeIndex: index
   }
 }
 export const setTitle = (title: string) => {

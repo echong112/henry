@@ -23,7 +23,7 @@ const ListView: React.FC<Props> = (props) => {
     }
     setIndex(current);
     dispatch(resetScroll());
-  }, [activeIndex, currList, dispatch, props]);
+  }, [activeIndex, currList, dispatch, props, index]);
 
   return (
     <div ref={list => currList = list}>
