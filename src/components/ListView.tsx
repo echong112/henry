@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import ListItem from './ListItem';
 import { useSelector, useDispatch } from 'react-redux';
 import { setMax } from '../actions';
+import ListItem from './ListItem';
 
 interface Props {
   list: any[];
