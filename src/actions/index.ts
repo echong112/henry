@@ -11,6 +11,24 @@ export const resetScroll = () => {
     activeIndex: 0
   }
 }
+
+let saved = Array<number>();
+export const savePlace = (index: number) => {
+  saved.push(index);
+  return {
+    type: 'SAVE_INDEX',
+    savedIndexes: saved
+  }
+}
+
+export const setPlace = () => {
+  saved.pop();
+  return {
+    type: 'SAVE_INDEX',
+    savedIndexes: saved
+  }
+}
+
 export const setTitle = (title: string) => {
   return {
     type: 'TITLE_SET',

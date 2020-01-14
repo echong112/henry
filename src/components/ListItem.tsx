@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 // eslint-disable-next-line
 import { Link, useHistory} from "react-router-dom";
 import { useSelector, useDispatch} from 'react-redux';
-import { unClick } from '../actions';
+import { unClick, savePlace } from '../actions';
 
 interface Props {
   currItem: any;
+  itemKey: number;
   isActive: boolean;
 };
 
@@ -26,6 +27,7 @@ const MenuItem: React.FC<Props> = (props) => {
 
     if (clicked && props.isActive) {
       dispatch(unClick());
+      dispatch(savePlace(props.itemKey));
       history.push(link);
     }
   }, [props, history, dispatch, clicked]);

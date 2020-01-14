@@ -51,10 +51,20 @@ const title = (state = '', action) => {
   }
 }
 
+const savedIndexes = (state = [], action) => {
+  switch(action.type) {
+    case 'SAVE_INDEX':
+      return action.savedIndexes;
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   activeIndex,
   clicked,
   menuClicked,
   isBack,
-  title
+  title,
+  savedIndexes
 });

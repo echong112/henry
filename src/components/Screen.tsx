@@ -9,7 +9,7 @@ import Portfolio from '../routes/Portfolio';
 import Work from '../routes/Work';
 import Job from '../routes/Job';
 import Skills from '../routes/Skills';
-import { unclickMenuButton, setIsBack } from '../actions';
+import { unclickMenuButton, setIsBack, setPlace } from '../actions';
 import StatusBar from './StatusBar';
 
 const Screen: React.FC = () => {

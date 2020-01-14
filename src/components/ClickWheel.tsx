@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { clickMenuButton, clickWheel, scrolled, unsetIsBack } from '../actions';
+import { clickMenuButton, clickWheel, scrolled, unsetIsBack, setPlace } from '../actions';
 import nextButton from '../assets/img/next.png';
 import prevButton from '../assets/img/prev.png';
 import playButton from '../assets/img/play.png';
@@ -13,6 +13,7 @@ const Wheel: React.FC = () => {
   const menuClicked = useCallback(() => {
     clickSound.play();
     dispatch(clickMenuButton());
+    // dispatch(setPlace());
   }, [dispatch, clickSound]);
 
   const handleWheelClick = useCallback(() => {

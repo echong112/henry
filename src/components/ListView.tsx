@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { resetScroll } from '../actions';
+import { resetScroll, setPlace } from '../actions';
 import ListItem from './ListItem';
 
 interface Props {
@@ -12,6 +12,10 @@ const ListView: React.FC<Props> = (props) => {
   const dispatch = useDispatch();
   const [index, setIndex] = useState(0);
   const activeIndex = useSelector((state: any) => state.activeIndex);
+  const savedIndexes = useSelector((state: any) => state.savedIndexes);
+  const backButtonClicked = useSelector((state: any) => state.menuClicked);
+  const isBack = useSelector((state: any) => state.isBack);
+
   let currList: any;
 
   useEffect(() => {
@@ -25,12 +29,21 @@ const ListView: React.FC<Props> = (props) => {
     dispatch(resetScroll());
   }, [activeIndex, currList, dispatch, props, index]);
 
+  useEffect(() => {
+    if (savedIndexes.length > 0) {
+      let temp = savedIndexes[savedIndexes.length-1];
+      setIndex(temp);
+      dispatch(setPlace());
+    }
+  }, []);
+
   return (
     <div ref={list => currList = list}>
       {props.list && props.list.map((item, k) => (
         <ListItem
           key={k}
           currItem={item}
+          itemKey={k}
           isActive={k === index}
         />
       ))}
