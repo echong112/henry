@@ -24,7 +24,7 @@ const Skills: React.FC = () => {
       </div>
       <p></p>
     </div>
-  )
+  );
 }
 
 export default Skills;

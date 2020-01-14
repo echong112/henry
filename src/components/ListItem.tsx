@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // eslint-disable-next-line
-import { BrowserRouter as Router, Link, useHistory} from "react-router-dom";
+import { Link, useHistory} from "react-router-dom";
 import { useSelector, useDispatch} from 'react-redux';
 import { unClick } from '../actions';
 

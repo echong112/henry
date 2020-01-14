@@ -12,7 +12,7 @@ import Skills from '../routes/Skills';
 import { unclickMenuButton, setIsBack } from '../actions';
 import StatusBar from './StatusBar';
 
-const Screen: React.FC = (props) => {
+const Screen: React.FC = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const myLoc = useLocation();
