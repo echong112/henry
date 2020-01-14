@@ -16,9 +16,9 @@ const ListView: React.FC<Props> = (props) => {
 
   useEffect(() => {
     let current = index;
-    if (activeIndex > 0) {
+    if (activeIndex > 0 && index > 0) {
       --current;
-    } else if (activeIndex < 0) {
+    } else if (activeIndex < 0 && current + 1 < props.list.length) {
       ++current;
     }
     setIndex(current);
