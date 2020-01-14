@@ -8,25 +8,23 @@ import playButton from '../assets/img/play.png';
 const Wheel: React.FC = () => {
   const mp3 = `${window.location.origin}/ipodclick.mp3`;
   const dispatch = useDispatch();
+  const clickSound = new Audio(mp3);
 
   const menuClicked = useCallback(() => {
-    const click = new Audio(mp3);
-    click.play();
+    clickSound.play();
     dispatch(clickMenuButton());
-  }, [dispatch, mp3]);
+  }, [dispatch, clickSound]);
 
   const handleWheelClick = useCallback(() => {
-    const click = new Audio(mp3);
-    click.play();
+    clickSound.play();
     dispatch(unsetIsBack());
     dispatch(clickWheel());
-  }, [dispatch, mp3]);
+  }, [dispatch, clickSound]);
 
   const handleScroll = useCallback((e: any) => {
-    const click = new Audio(mp3);
-    click.play();
+    clickSound.play();
     dispatch(scrolled(e.nativeEvent.wheelDelta));
-  }, [dispatch, mp3]);
+  }, [dispatch, clickSound]);
 
   const upKey = useCallback((event: any) => {
     if (event.keyCode === 38) handleScroll({nativeEvent: { wheelDelta: 1}}); // up

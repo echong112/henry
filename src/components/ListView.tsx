@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setMax } from '../actions';
+import { resetScroll } from '../actions';
 import ListItem from './ListItem';
 
 interface Props {
@@ -15,14 +15,14 @@ const ListView: React.FC<Props> = (props) => {
   let currList: any;
 
   useEffect(() => {
-    let max = props.list.length;
-    if (currList) {
-      if (activeIndex >= max) {
-        dispatch(setMax(max));
-      } else {
-        setIndex(activeIndex);
-      }
+    let current = index;
+    if (activeIndex > 0) {
+      --current;
+    } else if (activeIndex < 0) {
+      ++current;
     }
+    setIndex(current);
+    dispatch(resetScroll());
   }, [activeIndex, currList, dispatch, props]);
 
   return (

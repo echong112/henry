@@ -1,9 +1,15 @@
-let currIndex = 0;
 export const scrolled = (delta: number) => {
-  let activeIndex = delta > 0 ? currIndex <= 0 ? 0 : --currIndex : ++currIndex
+  let activeIndex = delta > 0 ? 1 : -1
   return {
     type: 'SCROLLED',
     activeIndex: activeIndex
+  }
+}
+
+export const resetScroll = () => {
+  return {
+    type: 'SCROLLED',
+    activeIndex: 0
   }
 }
 
@@ -19,13 +25,6 @@ export const setTitle = (title: string) => {
     title: title
   }
 }
-export const setMax = (newMax: number) => {
-  currIndex = newMax;
-  return ({
-    type: 'SET_MAX',
-    activeIndex: newMax
-  })
-};
 export const clickWheel = () => ({
   type: 'CLICKED_WHEEL',
   clicked: true
