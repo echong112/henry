@@ -14,8 +14,6 @@ const ListView: React.FC<Props> = (props) => {
   const activeIndex = useSelector((state: any) => state.activeIndex);
   const savedIndexes = useSelector((state: any) => state.savedIndexes);
 
-  let currList: any;
-
   useEffect(() => {
     let current = index;
     if (activeIndex > 0 && index > 0) {
@@ -25,7 +23,7 @@ const ListView: React.FC<Props> = (props) => {
     }
     setIndex(current);
     dispatch(resetScroll());
-  }, [activeIndex, currList, dispatch, props, index]);
+  }, [activeIndex, dispatch, props, index]);
 
   useEffect(() => {
     if (savedIndexes.length > 0) {
@@ -36,7 +34,7 @@ const ListView: React.FC<Props> = (props) => {
   }, []);
 
   return (
-    <div ref={list => currList = list}>
+    <div>
       {props.list && props.list.map((item, k) => (
         <ListItem
           key={k}
