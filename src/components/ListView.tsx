@@ -13,8 +13,6 @@ const ListView: React.FC<Props> = (props) => {
   const [index, setIndex] = useState(0);
   const activeIndex = useSelector((state: any) => state.activeIndex);
   const savedIndexes = useSelector((state: any) => state.savedIndexes);
-  const backButtonClicked = useSelector((state: any) => state.menuClicked);
-  const isBack = useSelector((state: any) => state.isBack);
 
   let currList: any;
 
