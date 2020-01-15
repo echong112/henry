@@ -13,7 +13,6 @@ const Wheel: React.FC = () => {
   const menuClicked = useCallback(() => {
     clickSound.play();
     dispatch(clickMenuButton());
-    // dispatch(setPlace());
   }, [dispatch, clickSound]);
 
   const handleWheelClick = useCallback(() => {

@@ -1,15 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setTitle } from '../actions';
 import { skills } from './_routes';
 
 const Skills: React.FC = () => {
   const dispatch = useDispatch();
+  const [currLocation, setCurrLocation] = useState(0);
   const activeIndex = useSelector((state: any) => state.activeIndex);
   let thisPage: any;
+
   useEffect(() => {
     dispatch(setTitle('Skills'));
-    if (activeIndex && thisPage) thisPage.scrollTo(activeIndex, activeIndex * 10);
+
+    if (activeIndex && thisPage) {
+      thisPage.scrollTo(activeIndex, activeIndex * 10);
+    }
   }, [activeIndex, dispatch, thisPage]);
 
   return (

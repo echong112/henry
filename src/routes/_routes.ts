@@ -126,25 +126,11 @@ export const portfolio = [
     tech: 'Jekyll, ES6, SASS'
   },
   {
-    url: 'https://www.citigroup.com/citi/about/',
-    title: 'Citi About Page',
-    parent: 'portfolio',
-    slug: 'citiabout',
-    tech: 'Jekyll, ES6, SASS'
-  },
-  {
     url: 'http://emersoncollective.com/',
     title: 'Emerson Collective',
     parent: 'portfolio',
     slug: 'emerson',
     tech: 'Episerver, C#, SASS, jQuery'
-  },
-  {
-    url: 'http://globalawardentry.com/ssu/',
-    title: 'XFinity Marketing Page',
-    parent: 'portfolio',
-    slug: 'xfinity',
-    tech: 'Jekyll, ES6, SASS'
   },
   {
     url: 'https://usa.beyblade.com/',
@@ -159,13 +145,6 @@ export const portfolio = [
     parent: 'portfolio',
     slug: 'moto',
     tech: 'WordPress, Bones, SASS'
-  },
-  {
-    url: 'http://www.abraxanepro.com/',
-    title: 'Abraxane Pro',
-    parent: 'portfolio',
-    slug: 'abraxane',
-    tech: 'WordPress, Bones, SASS, RSS Aggregator'
   },
 ]
 
