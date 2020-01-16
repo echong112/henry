@@ -60,11 +60,22 @@ const savedIndexes = (state = [], action) => {
   }
 }
 
+const isPlaying = (state = false, action) => {
+
+  switch(action.type) {
+    case 'PLAY_MUSIC':
+      return action.isPlaying;
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   activeIndex,
   clicked,
   menuClicked,
   isBack,
   title,
-  savedIndexes
+  savedIndexes,
+  isPlaying
 });

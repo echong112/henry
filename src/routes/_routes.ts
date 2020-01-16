@@ -303,5 +303,9 @@ export const mainList = [
   {
     title: 'Extras',
     slug: 'extras',
+  },
+  {
+    title: 'Shuffle Songs',
+    slug: 'player',
   }
 ];

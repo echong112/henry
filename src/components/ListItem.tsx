@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useHistory} from "react-router-dom";
 import VisibilitySensor from 'react-visibility-sensor';
 import { useSelector, useDispatch} from 'react-redux';
-import { unClick, savePlace } from '../actions';
+import { playMedia, unClick, savePlace } from '../actions';
 
 interface Props {
   currItem: any;
@@ -28,14 +28,15 @@ const MenuItem: React.FC<Props> = (props) => {
     setUrl(`/${link}`);
 
     if (clicked && props.isActive) {
-      dispatch(unClick());
-      dispatch(savePlace(props.itemKey));
-      if (isVisible) {
+      if (slug !== 'player') {
+        dispatch(unClick());
+        dispatch(savePlace(props.itemKey));
         history.push(link);
-
+      } else {
+        dispatch(playMedia());
       }
     }
-  }, [props, history, dispatch, clicked]);
+  }, [clicked]);
 
   const onChange = (isVisible: boolean) =>  setIsVisibile(isVisible);
   

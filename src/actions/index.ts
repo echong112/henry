@@ -29,6 +29,26 @@ export const setPlace = () => {
   }
 }
 
+export const playMedia = () => {
+  return {
+    type: 'PLAY_MUSIC',
+    isPlaying: true
+  }
+}
+
+export const stopMedia = () => {
+  return {
+    type: 'PLAY_MUSIC',
+    isPlaying: false
+  }
+}
+
+export const toggleMedia = (isPlaying: boolean) => {
+  return {
+    type: 'PLAY_MUSIC',
+    isPlaying: !isPlaying
+  }
+}
 export const setTitle = (title: string) => {
   return {
     type: 'TITLE_SET',
