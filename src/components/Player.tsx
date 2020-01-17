@@ -16,6 +16,10 @@ const useAudio = (url: string) => {
   const [playing, setPlaying] = useState(false);
   const isPlaying = useSelector((state: any) => state.isPlaying);
 
+  const track = useSelector((state: any) => state.track);
+  useEffect(() => {
+    console.log(track);
+  }, [track])
   useEffect(() => {
     setPlaying(isPlaying);
   }, [isPlaying])

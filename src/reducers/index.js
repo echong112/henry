@@ -70,6 +70,15 @@ const isPlaying = (state = false, action) => {
   }
 }
 
+const navigateTrack = (state = 1, action) => {
+  switch(action.type) {
+    case 'NAVIGATE_TRACK':
+      return action.track
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   activeIndex,
   clicked,
@@ -77,5 +86,6 @@ export default combineReducers({
   isBack,
   title,
   savedIndexes,
-  isPlaying
+  isPlaying,
+  navigateTrack
 });

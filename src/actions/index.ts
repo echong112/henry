@@ -43,6 +43,19 @@ export const stopMedia = () => {
   }
 }
 
+export const prevTrack = () => {
+  return {
+    type: 'NAVIGATE_TRACK',
+    track: -1
+  }
+}
+export const nextTrack = () => {
+  return {
+    type: 'NAVIGATE_TRACK',
+    track: 1
+  }
+}
+
 export const toggleMedia = (isPlaying: boolean) => {
   return {
     type: 'PLAY_MUSIC',

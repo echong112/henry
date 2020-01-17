@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { clickMenuButton, clickWheel, scrolled, toggleMedia, unsetIsBack } from '../actions';
+import { clickMenuButton, clickWheel, scrolled, toggleMedia, unsetIsBack, nextTrack, prevTrack } from '../actions';
 import nextButton from '../assets/img/next.png';
 import prevButton from '../assets/img/prev.png';
 import playButton from '../assets/img/play.png';
@@ -39,6 +39,9 @@ const Wheel: React.FC = () => {
     if (event.keyCode === 39) handleWheelClick(); // right
   }, [handleScroll, handleWheelClick, menuClicked]);
 
+  const handleNextTrack = () => dispatch(nextTrack());
+  const handlePrevTrack = () => dispatch(prevTrack());
+
   useEffect(() => {
     document.addEventListener("keydown", upKey, false);
     return () => {
@@ -54,10 +57,10 @@ const Wheel: React.FC = () => {
           <div className="square">
             <div className="row">
               <div onClick={menuClicked}><span>Menu</span></div>
-              <div><span className="next"><img alt="next" src={nextButton} /></span></div>
+              <div onClick={handleNextTrack}><span className="next"><img alt="next" src={nextButton} /></span></div>
             </div>
             <div className="row">
-              <div><span className="prev"><img alt="prev" src={prevButton} /></span></div>
+              <div onClick={handlePrevTrack}><span className="prev"><img alt="prev" src={prevButton} /></span></div>
               <div onClick={handlePlayButton} ><span className="play"><img alt="play" src={playButton} /></span></div>
             </div>
           </div>
