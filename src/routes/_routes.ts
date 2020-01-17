@@ -309,3 +309,32 @@ export const mainList = [
     slug: 'player',
   }
 ];
+
+
+export const playlist = [
+  {
+    slug: 'religion',
+    title: 'Losing My Religion',
+    artist: 'REM'
+  },
+  {
+    slug: 'lady',
+    title: 'Lady',
+    artist: 'Styx'
+  },
+  {
+    slug: 'drummer',
+    title: 'Little Drummer Boy',
+    artist: 'Katherine K. Davis'
+  },
+  {
+    slug: 'rem',
+    title: 'Everybody Hurts',
+    artist: 'REM'
+  },
+  {
+    slug: 'angela',
+    title: 'Angela',
+    artist: 'Mötley Crüe'
+  }
+]
