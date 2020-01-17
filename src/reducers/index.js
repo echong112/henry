@@ -70,7 +70,7 @@ const isPlaying = (state = false, action) => {
   }
 }
 
-const navigateTrack = (state = 1, action) => {
+const track = (state = 0, action) => {
   switch(action.type) {
     case 'NAVIGATE_TRACK':
       return action.track
@@ -87,5 +87,5 @@ export default combineReducers({
   title,
   savedIndexes,
   isPlaying,
-  navigateTrack
+  track
 });

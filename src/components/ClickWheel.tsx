@@ -1,14 +1,22 @@
 import React, { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { clickMenuButton, clickWheel, scrolled, toggleMedia, unsetIsBack, nextTrack, prevTrack } from '../actions';
+import {
+  clickMenuButton,
+  clickWheel,
+  scrolled,
+  toggleMedia,
+  unsetIsBack,
+  setTrack,
+} from '../actions';
 import nextButton from '../assets/img/next.png';
 import prevButton from '../assets/img/prev.png';
 import playButton from '../assets/img/play.png';
 
+import clickFile from '../assets/audio/ipodclick.mp3';
+
 const Wheel: React.FC = () => {
-  const mp3 = `${window.location.origin}/ipodclick.mp3`;
   const dispatch = useDispatch();
-  const clickSound = new Audio(mp3);
+  const clickSound = new Audio(clickFile);
   const isPlaying = useSelector((state: any) => state.isPlaying);
 
   const menuClicked = useCallback(() => {
@@ -39,8 +47,8 @@ const Wheel: React.FC = () => {
     if (event.keyCode === 39) handleWheelClick(); // right
   }, [handleScroll, handleWheelClick, menuClicked]);
 
-  const handleNextTrack = () => dispatch(nextTrack());
-  const handlePrevTrack = () => dispatch(prevTrack());
+  const handleNextTrack = () => dispatch(setTrack(1));
+  const handlePrevTrack = () => dispatch(setTrack(-1));
 
   useEffect(() => {
     document.addEventListener("keydown", upKey, false);

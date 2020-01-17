@@ -55,6 +55,20 @@ export const nextTrack = () => {
     track: 1
   }
 }
+export const resetTrack = () => {
+  return {
+    type: 'NAVIGATE_TRACK',
+    track: 0
+  }
+}
+
+export const setTrack = (index: number) => {
+  return {
+    type: 'NAVIGATE_TRACK',
+    track: index
+  }
+}
+
 
 export const toggleMedia = (isPlaying: boolean) => {
   return {

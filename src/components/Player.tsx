@@ -1,25 +1,44 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from 'react-redux';
-import lady from '../assets/audio/lady.mp3';
-import drummer from '../assets/audio/lady.mp3';
-import rem from '../assets/audio/rem.mp3';
+import { useDispatch, useSelector } from 'react-redux';
+import { setTrack, stopMedia, playMedia } from '../actions';
 import { playlist } from '../routes/_routes';
 
-const useAudio = (url: string) => {
-  console.log(playlist);
+const useAudio = () => {
+  const winLoc = window.location.origin;
 
+  const dispatch = useDispatch();
   const [activeIndex, setActiveIndex] = useState(0);
-  let newUrl: string = `${playlist[activeIndex].slug}.mp3`;
-  const mp3 = `${window.location.origin}/audio/${newUrl}`;
-  console.log(mp3);
-  const [audio] = useState(new Audio(mp3));
-  const [playing, setPlaying] = useState(false);
-  const isPlaying = useSelector((state: any) => state.isPlaying);
 
+  const mp3 = `${winLoc}/audio/${playlist[activeIndex].slug}.mp3`;
+
+  const [music, setMusic] = useState(`${winLoc}/audio/${playlist[activeIndex].slug}.mp3`);
+
+  const [audio, setAudio] = useState(new Audio(music));
+  const [playing, setPlaying] = useState(false);
+
+  const isPlaying = useSelector((state: any) => state.isPlaying);
   const track = useSelector((state: any) => state.track);
+
+  // listen for changes in track
   useEffect(() => {
-    console.log(track);
-  }, [track])
+    if (track !== 0) {
+      if (track > 0) {
+        if (activeIndex + 1 > playlist.length - 1) {
+          setActiveIndex(0);
+        } else {
+          setActiveIndex(activeIndex + 1);
+        }
+      } else {
+        if (activeIndex - 1 >= 0) {
+          setActiveIndex(activeIndex - 1);
+        } else {
+          setActiveIndex(playlist.length - 1);
+        }
+      }
+      dispatch(stopMedia());
+    }
+  }, [track]);
+
   useEffect(() => {
     setPlaying(isPlaying);
   }, [isPlaying])
@@ -38,7 +57,7 @@ const useAudio = (url: string) => {
 };
 
 const Player = () => {
-  const [playing, toggle] = useAudio(lady);
+  const [playing, toggle] = useAudio();
   return <div></div>;
 };
 
