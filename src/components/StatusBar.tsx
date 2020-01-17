@@ -11,11 +11,11 @@ const StatusBar: React.FC = () => {
   }, [activeTitle]);
   return (
     <div className="status-bar">
-      <span className="status">
+      <div className="status">
         {isPlaying && (
-          <span>Play</span>
+          <span className="arrow-right"></span>
         )}
-      </span>
+      </div>
       <span className="status-bar__title">{title}</span>
       <span className="battery"><img alt="battery" src={battery} /></span>
     </div>
