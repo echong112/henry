@@ -2,3 +2,4 @@
 /// <reference types="react-router-dom" />
 /// <reference types="react-transition-group" />
 /// <reference types="react-redux" />
+declare module '*.mp3'

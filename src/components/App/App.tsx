@@ -2,23 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 import Controls from '../ClickWheel';
 import Screen from '../Screen';
+import Player from '../Player';
 import './App.scss';
 
 const App: React.FC = () => {
-  const mp3 = `${window.location.origin}/ipodclick.mp3`;
-  const clickSound = new Audio(mp3);
-  clickSound.play();
   return (
     <Router>
       <div className="ipod">
         <Screen />
         <Controls />
-        <div className="player">
-          <h4>audio player</h4>
-          <audio autoPlay>
-            <source src="../../assets/audio/ipodclick.mp3"></source>
-          </audio>
-        </div>
+        <Player />
       </div>
     </Router>
   );
