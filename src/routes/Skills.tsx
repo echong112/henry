@@ -1,17 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setTitle } from '../actions';
+import { setTitle, resetScroll } from '../actions';
 import { skills } from './_routes';
 
 const Skills: React.FC = () => {
   const dispatch = useDispatch();
   const activeIndex = useSelector((state: any) => state.activeIndex);
+  const [index, setIndex] = useState(0);
   let thisPage: any;
 
   useEffect(() => {
     dispatch(setTitle('Skills'));
     if (activeIndex && thisPage) {
-      thisPage.scrollTo(activeIndex, activeIndex * 10);
+      if (activeIndex > 0) {
+        setIndex(index - 1);
+      } else if (activeIndex < 0) {
+        setIndex(index + 1);
+      }
+      thisPage.scrollTo(index, index * 10);
+      dispatch(resetScroll());
     }
   }, [activeIndex]);
 
