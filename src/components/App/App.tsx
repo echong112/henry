@@ -14,7 +14,8 @@ const App: React.FC = () => {
         <Screen />
         <Controls />
         <div className="player">
-          <audio controls autoPlay loop>
+          <h4>audio player</h4>
+          <audio autoPlay>
             <source src="../../assets/audio/ipodclick.mp3"></source>
           </audio>
         </div>

@@ -26,9 +26,9 @@ const MenuItem: React.FC<Props> = (props) => {
     setUrl(`/${link}`);
 
     if (clicked && props.isActive) {
+      dispatch(unClick());
+      dispatch(savePlace(props.itemKey));
       if (slug !== 'player') {
-        dispatch(unClick());
-        dispatch(savePlace(props.itemKey));
         history.push(link);
       } else {
         dispatch(playMedia());
