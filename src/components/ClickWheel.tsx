@@ -19,26 +19,29 @@ const Wheel: React.FC = () => {
   const clickSound = new Audio(clickFile);
   const isPlaying = useSelector((state: any) => state.isPlaying);
 
+  const handleNextTrack = () => dispatch(setTrack(1));
+  const handlePrevTrack = () => dispatch(setTrack(-1));
+
   const menuClicked = useCallback(() => {
     clickSound.play();
     dispatch(clickMenuButton());
   }, [dispatch, clickSound]);
 
-  const handlePlayButton = () => {
+  const handlePlayButton = useCallback(() => {
     clickSound.play();
     dispatch(toggleMedia(isPlaying));
-  }
+  }, [clickSound, dispatch, isPlaying]);
 
   const handleWheelClick = useCallback(() => {
     clickSound.play();
     dispatch(unsetIsBack());
     dispatch(clickWheel());
-  }, [dispatch, clickSound]);
+  }, [clickSound, dispatch]);
 
   const handleScroll = useCallback((e: any) => {
     clickSound.play();
     dispatch(scrolled(e.nativeEvent.wheelDelta));
-  }, [dispatch, clickSound]);
+  }, [clickSound, dispatch])
 
   const upKey = useCallback((event: any) => {
     if (event.keyCode === 38) handleScroll({nativeEvent: { wheelDelta: 1}}); // up
@@ -46,9 +49,6 @@ const Wheel: React.FC = () => {
     if (event.keyCode === 37) menuClicked(); // left
     if (event.keyCode === 39) handleWheelClick(); // right
   }, [handleScroll, handleWheelClick, menuClicked]);
-
-  const handleNextTrack = () => dispatch(setTrack(1));
-  const handlePrevTrack = () => dispatch(setTrack(-1));
 
   useEffect(() => {
     document.addEventListener("keydown", upKey, false);

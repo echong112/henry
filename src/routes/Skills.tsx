@@ -11,6 +11,9 @@ const Skills: React.FC = () => {
 
   useEffect(() => {
     dispatch(setTitle('Skills'));
+  })
+
+  useEffect(() => {
     if (activeIndex && thisPage) {
       if (activeIndex > 0) {
         setIndex(index - 1);
@@ -20,7 +23,7 @@ const Skills: React.FC = () => {
       thisPage.scrollTo(index, index * 10);
       dispatch(resetScroll());
     }
-  }, [activeIndex]);
+  }, [activeIndex, index, thisPage, dispatch]);
 
   return (
     <div className="page" ref={myPage => thisPage = myPage}>

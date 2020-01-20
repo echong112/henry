@@ -15,7 +15,6 @@ const ListView: React.FC<Props> = (props) => {
   const savedIndexes = useSelector((state: any) => state.savedIndexes);
   const isBack = useSelector((state: any) => state.isBack);
 
-
   useEffect(() => {
     let current = index;
     if (activeIndex > 0 && index > 0) {
@@ -33,7 +32,7 @@ const ListView: React.FC<Props> = (props) => {
       setIndex(temp);
       dispatch(setPlace());
     }
-  }, [isBack]);
+  }, [isBack, dispatch, savedIndexes]);
 
   return (
     <div>

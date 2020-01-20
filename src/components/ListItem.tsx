@@ -34,7 +34,7 @@ const MenuItem: React.FC<Props> = (props) => {
         dispatch(playMedia());
       }
     }
-  }, [clicked]);
+  }, [clicked, dispatch, history, props]);
 
   return (
     <Link className={`menu-item ${props.isActive ? 'active' : ''}`} to={{
