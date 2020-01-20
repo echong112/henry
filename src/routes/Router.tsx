@@ -21,6 +21,7 @@ const Screen: React.FC = () => {
   useEffect(() => {
     if (menuClicked) {
       dispatch(unclickMenuButton());
+
       if (myLoc.pathname.length > 1) {
         history.goBack();
         dispatch(setIsBack());

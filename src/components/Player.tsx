@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { resetTrack, stopMedia, setPlace, playMedia } from '../actions';
+import { resetTrack, stopMedia, playMedia } from '../actions';
 import { playlist } from '../routes/_routes';
 
 const Player = () => {
@@ -21,7 +21,7 @@ const Player = () => {
       dispatch(playMedia());
     }
     dispatch(resetTrack());
-  }, [track]);
+  }, [track, activeIndex, audio, dispatch, winLoc]);
 
   useEffect(() => {
     isPlaying ? audio.play() : audio.pause();
