@@ -27,7 +27,7 @@ const Player = () => {
     isPlaying ? audio.play() : audio.pause();
   }, [isPlaying, audio]);
 
-  return (<></>);
+  return <></>
 };
 
 export default Player;
