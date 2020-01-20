@@ -313,6 +313,16 @@ export const mainList = [
 
 export const playlist = [
   {
+    slug: 'rem',
+    title: 'Everybody Hurts',
+    artist: 'REM'
+  },
+  {
+    slug: 'angela',
+    title: 'Angela',
+    artist: 'Mötley Crüe'
+  },
+  {
     slug: 'religion',
     title: 'Losing My Religion',
     artist: 'REM'
@@ -327,14 +337,4 @@ export const playlist = [
     title: 'Little Drummer Boy',
     artist: 'Katherine K. Davis'
   },
-  {
-    slug: 'rem',
-    title: 'Everybody Hurts',
-    artist: 'REM'
-  },
-  {
-    slug: 'angela',
-    title: 'Angela',
-    artist: 'Mötley Crüe'
-  }
 ]

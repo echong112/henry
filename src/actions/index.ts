@@ -5,6 +5,7 @@ export const scrolled = (delta: number) => {
     activeIndex: activeIndex
   }
 }
+
 export const resetScroll = () => {
   return {
     type: 'SCROLLED',
@@ -68,7 +69,6 @@ export const setTrack = (index: number) => {
     track: index
   }
 }
-
 
 export const toggleMedia = (isPlaying: boolean) => {
   return {
