@@ -23,7 +23,6 @@ const ListView: React.FC<Props> = (props) => {
   const clicked = useSelector((state: any) => state.clicked);
 
   const onVisibilityChange = (isVisible: boolean) => {
-    console.log(isVisible)
     setVisible(isVisible);
   }
 
