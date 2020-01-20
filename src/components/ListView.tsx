@@ -5,7 +5,6 @@ import { resetScroll, setPlace, playMedia, unClick, savePlace } from '../actions
 import ListItem from './ListItem';
 import VisibilitySensor from 'react-visibility-sensor';
 
-
 interface Props {
   list: any[];
   parent?: string;
