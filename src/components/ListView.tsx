@@ -42,6 +42,7 @@ const ListView: React.FC<Props> = (props) => {
           currItem={item}
           itemKey={k}
           isActive={k === index}
+          slug={item.slug}
         />
       ))}
     </div>

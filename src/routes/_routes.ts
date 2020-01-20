@@ -307,6 +307,10 @@ export const mainList = [
   {
     title: 'Shuffle Songs',
     slug: 'player',
+  },
+  {
+    title: 'Now Playing',
+    slug: 'nowplaying',
   }
 ];
 

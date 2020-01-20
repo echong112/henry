@@ -323,3 +323,10 @@ polygon:hover {
   padding-top: 25px;
   padding-left: 5px;
 }
+
+.now-playing {
+  display: none;
+  &.playing {
+    display: block;
+  }
+}

@@ -8,6 +8,7 @@ interface Props {
   currItem: any;
   itemKey: number;
   isActive: boolean;
+  slug?: string;
 };
 
 const MenuItem: React.FC<Props> = (props) => {
@@ -15,6 +16,7 @@ const MenuItem: React.FC<Props> = (props) => {
   const history = useHistory();
   const dispatch = useDispatch();
   const clicked = useSelector((state: any) => state.clicked);
+  const isPlaying = useSelector((state: any) => state.isPlaying);
 
   useEffect(() => {
     let link = '/';
@@ -35,9 +37,8 @@ const MenuItem: React.FC<Props> = (props) => {
       }
     }
   }, [clicked, dispatch, history, props]);
-
   return (
-    <Link className={`menu-item ${props.isActive ? 'active' : ''}`} to={{
+    <Link className={`menu-item ${props.isActive ? 'active' : ''} ${props.slug === 'nowplaying' ? 'now-playing' : ''} ${isPlaying ? 'playing' : ''}`} to={{
       pathname: url,
       state: {
         currentItem: props.currItem
