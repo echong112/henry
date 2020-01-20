@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { resetScroll, setPlace } from '../actions';
+import { Link, useHistory} from "react-router-dom";
+import { resetScroll, setPlace, playMedia, unClick, savePlace } from '../actions';
 import ListItem from './ListItem';
 
 interface Props {
@@ -9,11 +10,32 @@ interface Props {
 };
 
 const ListView: React.FC<Props> = (props) => {
+  const [url, setUrl] = useState('/');
   const dispatch = useDispatch();
+  const history = useHistory();
   const [index, setIndex] = useState(0);
   const activeIndex = useSelector((state: any) => state.activeIndex);
   const savedIndexes = useSelector((state: any) => state.savedIndexes);
   const isBack = useSelector((state: any) => state.isBack);
+  const clicked = useSelector((state: any) => state.clicked);
+
+  useEffect(() => {
+    if (clicked) {
+      let parent = props.list[index].parent;
+      let slug = props.list[index].slug;
+      let link = parent ? `${parent}/${slug}` : slug;
+  
+      setUrl(`/${link}`);
+  
+      dispatch(unClick());
+      dispatch(savePlace(index));
+      if (slug === 'player') {
+        dispatch(playMedia());
+      } else {
+        history.push(link);
+      }
+    }
+  }, [clicked])
 
   useEffect(() => {
     let current = index;
