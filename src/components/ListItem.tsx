@@ -14,12 +14,14 @@ const MenuItem: React.FC<Props> = (props) => {
   const isPlaying = useSelector((state: any) => state.isPlaying);
 
   return (
-    <Link className={`menu-item ${props.isActive ? 'active' : ''} ${props.slug === 'nowplaying' ? 'now-playing' : ''} ${isPlaying ? 'playing' : ''}`} to={{
-      pathname: url,
-      state: {
-        currentItem: props.currItem
-      }
-    }}>{props.currItem.title}</Link>
+    <Link
+      className={`menu-item ${props.isActive ? 'active' : ''} ${props.slug === 'nowplaying' ? 'now-playing' : ''} ${isPlaying ? 'playing' : ''}`}
+      to={{
+        pathname: url,
+        state: {
+          currentItem: props.currItem
+        }
+     }}>{props.currItem.title}</Link>
   );
 };
 export default MenuItem;
