@@ -30,10 +30,10 @@ const MenuItem: React.FC<Props> = (props) => {
     if (clicked && props.isActive) {
       dispatch(unClick());
       dispatch(savePlace(props.itemKey));
-      if (slug !== 'player') {
-        history.push(link);
-      } else {
+      if (slug === 'player') {
         dispatch(playMedia());
+      } else {
+        history.push(link);
       }
     }
   }, [clicked, dispatch, history, props]);
