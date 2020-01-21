@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { resetTrack, stopMedia, playMedia } from '../actions';
+import { activeTrack, resetTrack, stopMedia, playMedia } from '../actions';
 import { playlist } from '../routes/_routes';
 
 const Player = () => {
@@ -18,6 +18,7 @@ const Player = () => {
       dispatch(stopMedia());
       setAudio(new Audio(`${winLoc}/audio/${playlist[Math.abs(newIndex)].slug}.mp3`));
       audio.load();
+      dispatch(activeTrack(Math.abs(newIndex)))
       dispatch(playMedia());
     }
     dispatch(resetTrack());

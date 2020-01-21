@@ -63,6 +63,13 @@ export const resetTrack = () => {
   }
 }
 
+export const activeTrack = (track: number) => {
+  return {
+    type: 'ACTIVE_TRACK',
+    activeTrack: track
+  }
+}
+
 export const setTrack = (index: number) => {
   return {
     type: 'NAVIGATE_TRACK',

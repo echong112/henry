@@ -9,6 +9,7 @@ import Portfolio from './Portfolio';
 import Work from './Work';
 import Job from './Job';
 import Skills from './Skills';
+import NowPlaying from './NowPlaying';
 import { unclickMenuButton, setIsBack } from '../actions';
 
 const Screen: React.FC = () => {
@@ -44,6 +45,7 @@ const Screen: React.FC = () => {
             <Route path="/portfolio/:work" component={Work} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/skills" component={Skills} />
+            <Route path="/nowplaying" component={NowPlaying} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>

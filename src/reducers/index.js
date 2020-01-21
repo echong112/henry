@@ -78,6 +78,14 @@ const track = (state = 0, action) => {
       return state;
   }
 }
+const activeTrack = (state = 0, action) => {
+  switch(action.type) {
+    case 'ACTIVE_TRACK':
+      return action.activeTrack
+    default:
+      return state;
+  }
+}
 
 export default combineReducers({
   activeIndex,
@@ -87,5 +95,6 @@ export default combineReducers({
   title,
   savedIndexes,
   isPlaying,
-  track
+  track,
+  activeTrack
 });
