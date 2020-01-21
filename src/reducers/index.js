@@ -87,6 +87,15 @@ const activeTrack = (state = 0, action) => {
   }
 }
 
+const progress = (state = 0, action) => {
+  switch(action.type) {
+    case 'PROGRESSING':
+      return action.progress
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   activeIndex,
   clicked,
@@ -96,5 +105,6 @@ export default combineReducers({
   savedIndexes,
   isPlaying,
   track,
-  activeTrack
+  activeTrack,
+  progress
 });

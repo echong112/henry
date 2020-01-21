@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { activeTrack, resetTrack, stopMedia, playMedia } from '../actions';
+import { activeTrack, resetTrack, stopMedia, playMedia, setProgress } from '../actions';
 import { playlist } from '../routes/_routes';
 
 const Player = () => {
@@ -25,7 +25,19 @@ const Player = () => {
   }, [track, activeIndex, audio, dispatch, winLoc]);
 
   useEffect(() => {
+    let progress = setInterval(() => {
+      if (isPlaying) {
+        dispatch(setProgress(audio.currentTime / audio.duration));
+      }
+    }, 1000);
+    return () => {
+      clearInterval(progress);
+    }
+  }, [isPlaying])
+
+  useEffect(() => {
     isPlaying ? audio.play() : audio.pause();
+
   }, [isPlaying, audio]);
 
   return <></>

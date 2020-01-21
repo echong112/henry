@@ -113,3 +113,8 @@ export const unsetIsBack = () => ({
   type: 'IS_BACK',
   isBack: false,
 })
+
+export const setProgress = (progress: number) => ({
+  type: 'PROGRESSING',
+  progress: progress,
+})

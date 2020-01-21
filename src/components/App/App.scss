@@ -338,7 +338,6 @@ polygon:hover {
   flex-direction: row;
   align-items: center;
   height: 80%;
-  border: green 1px dotted;
 
   .artwork-image {
     width: (100%/3);
@@ -349,6 +348,27 @@ polygon:hover {
   }
   .meta {
     width: (100%/3) * 2;
-    background: pink;
+
+    & > p {
+      font-weight: bold;
+      font-size: 1em;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.progress-bar {
+  height: 15px;
+  width: 94%;background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 34%, rgba(190,190,190,1) 47%, rgba(255,255,255,1) 57%);
+  margin: auto;
+  border: rgb(197, 197, 197) 1px solid;
+  overflow: hidden;
+  position: relative;
+  
+  .progress {
+    height: 100%;
+    width: 0;
+    position: absolute;
   }
 }

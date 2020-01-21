@@ -319,26 +319,32 @@ export const playlist = [
   {
     slug: 'rem',
     title: 'Everybody Hurts',
-    artist: 'REM'
+    artist: 'REM',
+    album: 'Automatic for the People'
   },
   {
     slug: 'angela',
     title: 'Angela',
-    artist: 'Mötley Crüe'
+    artist: 'Mötley Crüe',
+    album: 'Decade of Decadence'
+
   },
   {
     slug: 'religion',
     title: 'Losing My Religion',
-    artist: 'REM'
+    artist: 'REM',
+    album: 'Out of Time'
   },
   {
     slug: 'lady',
     title: 'Lady',
-    artist: 'Styx'
+    artist: 'Styx',
+    album: 'Best of Styx'
   },
   {
     slug: 'drummer',
     title: 'Little Drummer Boy',
-    artist: 'Katherine K. Davis'
+    artist: 'Katherine K. Davis',
+    album: 'PTXmas'
   },
 ]
