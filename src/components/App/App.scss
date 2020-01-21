@@ -88,9 +88,6 @@ table {
   padding: 5px 2px;
   background: rgb(141,164,178);
   background: linear-gradient(0deg, rgba(141,164,178,0.6839110644257703) 0%, rgba(206,221,243,1) 51%, rgba(211,226,248,1) 100%);
-  
-  
-
 
   &__title {
     font-weight: 900;
@@ -370,5 +367,6 @@ polygon:hover {
     height: 100%;
     width: 0;
     position: absolute;
+    background: rgba(3, 110, 233, 0.85);
   }
 }
