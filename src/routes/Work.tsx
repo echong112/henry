@@ -13,9 +13,11 @@ const Work: React.FC = () => {
   }, [dispatch, filtered]);
   return (
     <div className="page">
-      <h1>{filtered.title}</h1>
-      <p>{filtered.tech}</p>
-      <p>{filtered.url}</p>
+      <div className="page-container">
+        <h3>{filtered.title}</h3>
+        <p className="smaller-p">{filtered.tech}</p>
+        <p className="smaller-p">{filtered.url}</p>
+      </div>
     </div>
   )
 }

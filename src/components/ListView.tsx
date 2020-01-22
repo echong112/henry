@@ -43,7 +43,7 @@ const ListView: React.FC<Props> = (props) => {
     let current = index;
     if (activeIndex > 0 && index > 0) {
       --current;
-    } else if (activeIndex < 0 && current + 1 < props.list.length) {
+    } else if (activeIndex < 0 && current + 1 < props.list.length - 1) {
       ++current;
     }
     setIndex(current);

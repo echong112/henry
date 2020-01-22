@@ -9,9 +9,11 @@ const Education: React.FC = () => {
   }, [dispatch])
   return (
     <div className="page">
-      <h3>Education</h3>
-      <p>Rutgers University, New Brunswick</p>
-      <p>Major: Applied Economics</p>
+      <div className="page-container">
+        <h3>Education</h3>
+        <p>Rutgers University, New Brunswick</p>
+        <p>Major: Applied Economics</p>
+      </div>
     </div>
   )
 }

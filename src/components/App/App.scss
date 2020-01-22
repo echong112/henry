@@ -197,6 +197,11 @@ polygon:hover {
   &.no-scroll {
     overflow: hidden;
   }
+
+  .page-container {
+    padding: 5px;
+  }
+
   h4 {
     font-weight: bold;
   }
@@ -369,4 +374,12 @@ polygon:hover {
     position: absolute;
     background: rgba(3, 110, 233, 0.85);
   }
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.smaller-p {
+  font-size: .8em;
 }
