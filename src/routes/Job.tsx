@@ -12,9 +12,11 @@ const Job: React.FC = () => {
   let thisPage: any;
   let { exp } = useParams();
   let filtered = jobs.filter((item, i) => item.slug === exp)[0];
+
   useEffect(() => {
     dispatch(setTitle(filtered.title));
   }, [dispatch, filtered]);
+
   useEffect(() => {
     if (activeIndex && thisPage) {
       if (activeIndex > 0) {
@@ -26,6 +28,7 @@ const Job: React.FC = () => {
       dispatch(resetScroll());
     }
   }, [activeIndex, index, thisPage, dispatch]);
+
   return (
     <div className="page" ref={myPage => thisPage = myPage}>
       <h3>{filtered.jobTitle}</h3>

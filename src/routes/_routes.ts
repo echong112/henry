@@ -1,4 +1,3 @@
-
 export const jobs = [
   {
     jobTitle: 'Senior Front End Engineer',
@@ -94,7 +93,6 @@ export const jobs = [
     ],
   }
 ];
-
 
 export const portfolio = [
   {
@@ -281,8 +279,6 @@ export const skills = [
   }
 ];
 
-
-
 export const mainList = [
   {
     title: 'Experience',
@@ -313,7 +309,6 @@ export const mainList = [
     slug: 'nowplaying',
   }
 ];
-
 
 export const playlist = [
   {
@@ -347,4 +342,4 @@ export const playlist = [
     artist: 'Katherine K. Davis',
     album: 'PTXmas'
   },
-]
+];

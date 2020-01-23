@@ -11,6 +11,7 @@ const Player = () => {
   const isPlaying = useSelector((state: any) => state.isPlaying);
   const track = useSelector((state: any) => state.track);
 
+  // Listen changes in the track state from Redux
   useEffect(() => {
     if (track !== 0) {
       let newIndex = (activeIndex + track) % (playlist.length - 1);
@@ -24,6 +25,7 @@ const Player = () => {
     dispatch(resetTrack());
   }, [track, activeIndex, audio, dispatch, winLoc]);
 
+  // Sets progress animation from audio object
   useEffect(() => {
     let progress = setInterval(() => {
       if (isPlaying) {
@@ -35,9 +37,9 @@ const Player = () => {
     }
   }, [isPlaying, audio, dispatch])
 
+  // Listens for isPlaying state in Redux
   useEffect(() => {
     isPlaying ? audio.play() : audio.pause();
-
   }, [isPlaying, audio]);
 
   return <></>
