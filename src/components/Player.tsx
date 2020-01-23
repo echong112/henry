@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { activeTrack, resetTrack, stopMedia, playMedia, setProgress } from '../actions';
 import { playlist } from '../routes/_routes';
@@ -33,7 +33,7 @@ const Player = () => {
     return () => {
       clearInterval(progress);
     }
-  }, [isPlaying])
+  }, [isPlaying, audio, dispatch])
 
   useEffect(() => {
     isPlaying ? audio.play() : audio.pause();
