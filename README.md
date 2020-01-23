@@ -1,6 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Enrique's iPod Resume
 
-## Available Scripts
+I recently found my iPod video 5th Generation. I loved this thing. It was my constant companion for 3 years, until the iPhone came out. I thought it would be fun to make an resume themed on the iPod. For any Office fans, the playlist might be amusing.
+
+Redux was used to distill all the user inputs from the click wheel and translate them into screen actions. Redux really helped keep the state of the player and the navigation in sync. 
+
+* TypeScript
+* React Functional Components
+* Redux
+* AWS S3 Bucket Web Hosting
+* AWS CloudFront
+
+
+* Item 1
+* Item 2
+* Item 3
+    * Item 3a
+    * Item 3b
+    * Item 3c
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
+
+## Build Instruction: 
 
 In the project directory, you can run:
 
