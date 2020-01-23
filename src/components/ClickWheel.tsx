@@ -21,7 +21,6 @@ const Wheel: React.FC = () => {
   const handleNextTrack = () => dispatch(setTrack(1));
   const handlePrevTrack = () => dispatch(setTrack(-1));
 
-  /* ######################################################################### */
   // User Action Handlers
   const menuClicked = useCallback(() => {
     clickSound.play();
