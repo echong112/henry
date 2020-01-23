@@ -24,6 +24,7 @@ const Player = () => {
     }
     dispatch(resetTrack());
   }, [track, activeIndex, audio, dispatch, winLoc]);
+  /* ######################################################################### */
 
   // Sets progress animation from audio object
   useEffect(() => {
@@ -35,7 +36,8 @@ const Player = () => {
     return () => {
       clearInterval(progress);
     }
-  }, [isPlaying, audio, dispatch])
+  }, [isPlaying, audio, dispatch]);
+  /* ######################################################################### */
 
   // Listens for isPlaying state in Redux
   useEffect(() => {

@@ -21,6 +21,8 @@ const Wheel: React.FC = () => {
   const handleNextTrack = () => dispatch(setTrack(1));
   const handlePrevTrack = () => dispatch(setTrack(-1));
 
+  /* ######################################################################### */
+  // User Action Handlers
   const menuClicked = useCallback(() => {
     clickSound.play();
     dispatch(clickMenuButton());
@@ -40,21 +42,26 @@ const Wheel: React.FC = () => {
   const handleScroll = useCallback((e: any) => {
     clickSound.play();
     dispatch(scrolled(e.nativeEvent.wheelDelta));
-  }, [clickSound, dispatch])
+  }, [clickSound, dispatch]);
+  /* ######################################################################### */
 
+  // User Action Handlers for keyboard
   const upKey = useCallback((event: any) => {
     if (event.keyCode === 38) handleScroll({nativeEvent: { wheelDelta: 1}}); // up
     if (event.keyCode === 40) handleScroll({nativeEvent: { wheelDelta: -1}}); // down
     if (event.keyCode === 37) menuClicked(); // left
     if (event.keyCode === 39) handleWheelClick(); // right
   }, [handleScroll, handleWheelClick, menuClicked]);
+  /* ######################################################################### */
 
+  // DOM listeners and cleanup
   useEffect(() => {
     document.addEventListener("keydown", upKey, false);
     return () => {
       document.removeEventListener("keydown", upKey, false);
     };
   }, [upKey]);
+  /* ######################################################################### */
   
   return (
     <div className="controls">

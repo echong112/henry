@@ -36,6 +36,7 @@ const ListView: React.FC<Props> = (props) => {
     }
     dispatch(unClick());
   }, [clicked, dispatch, history, index, props, visible])
+  /* ######################################################################### */
 
   // listens for click wheel scroll
   useEffect(() => {
@@ -48,6 +49,7 @@ const ListView: React.FC<Props> = (props) => {
     setIndex(current);
     dispatch(resetScroll());
   }, [activeIndex, dispatch, props, index]);
+  /* ######################################################################### */
 
   // checks for isBack navigation state for router animation direction
   useEffect(() => {
@@ -57,6 +59,7 @@ const ListView: React.FC<Props> = (props) => {
       dispatch(setPlace());
     }
   }, [isBack, dispatch, savedIndexes]);
+  /* ######################################################################### */
 
   return (
     <VisibilitySensor onChange={onVisibilityChange}>
