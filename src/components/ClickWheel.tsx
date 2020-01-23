@@ -50,6 +50,7 @@ const Wheel: React.FC = () => {
     if (event.keyCode === 40) handleScroll({nativeEvent: { wheelDelta: -1}}); // down
     if (event.keyCode === 37) menuClicked(); // left
     if (event.keyCode === 39) handleWheelClick(); // right
+    if (event.keyCode === 32) handlePlayButton(); // right
   }, [handleScroll, handleWheelClick, menuClicked]);
   /* ######################################################################### */
 
