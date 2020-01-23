@@ -1,6 +1,7 @@
-#Enrique's iPod Resume
+# Enrique's iPod Resume
 
 I recently found my iPod video 5th Generation. I loved this thing. It was my constant companion for 3 years, until the iPhone came out. I thought it would be fun to make an resume themed on the iPod. For any Office fans, the playlist might be amusing.
+[enriquechong.com](https://www.enriquechong.com/)
 
 ### Tools
 * TypeScript
@@ -9,7 +10,7 @@ I recently found my iPod video 5th Generation. I loved this thing. It was my con
 * AWS S3 Bucket Web Hosting
 * AWS CloudFront
 
-Redux was used to distill all the user inputs from the click wheel and translate them into screen actions. Redux really helped keep the state of the player and the navigation in sync.
+Redux was used to gather inputs from the click wheel and translate them into screen actions.
 
 ### Points of Interest
 * src
@@ -21,6 +22,9 @@ Redux was used to distill all the user inputs from the click wheel and translate
         * ListView -> ListItem (main UI feature of the iPod OS)
         * Player (handles background media and now playing screen)
     * routes
+
+### To Do
+* 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
