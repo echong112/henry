@@ -51,7 +51,7 @@ const Wheel: React.FC = () => {
     if (event.keyCode === 37) menuClicked(); // left
     if (event.keyCode === 39) handleWheelClick(); // right
     if (event.keyCode === 32) handlePlayButton(); // right
-  }, [handleScroll, handleWheelClick, menuClicked]);
+  }, [handlePlayButton, handleScroll, handleWheelClick, menuClicked]);
   /* ######################################################################### */
 
   // DOM listeners and cleanup
