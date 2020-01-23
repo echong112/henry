@@ -19,11 +19,9 @@ const ListView: React.FC<Props> = (props) => {
   const savedIndexes = useSelector((state: any) => state.savedIndexes);
   const isBack = useSelector((state: any) => state.isBack);
   const clicked = useSelector((state: any) => state.clicked);
+  const onVisibilityChange = (isVisible: boolean) => setVisible(isVisible);
 
-  const onVisibilityChange = (isVisible: boolean) => {
-    setVisible(isVisible);
-  }
-
+  // Saves index for parent menu active item on list item click
   useEffect(() => {
     if (clicked && visible) {
       let parent = props.list[index].parent;
@@ -39,6 +37,7 @@ const ListView: React.FC<Props> = (props) => {
     dispatch(unClick());
   }, [clicked, dispatch, history, index, props, visible])
 
+  // listens for click wheel scroll
   useEffect(() => {
     let current = index;
     if (activeIndex > 0 && index > 0) {
@@ -50,6 +49,7 @@ const ListView: React.FC<Props> = (props) => {
     dispatch(resetScroll());
   }, [activeIndex, dispatch, props, index]);
 
+  // checks for isBack navigation state for router animation direction
   useEffect(() => {
     if (savedIndexes.length > 0 && isBack) {
       let temp = savedIndexes[savedIndexes.length-1];

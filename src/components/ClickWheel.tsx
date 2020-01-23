@@ -11,7 +11,6 @@ import {
 import nextButton from '../assets/img/next.png';
 import prevButton from '../assets/img/prev.png';
 import playButton from '../assets/img/play.png';
-
 import clickFile from '../assets/audio/ipodclick.mp3';
 
 const Wheel: React.FC = () => {

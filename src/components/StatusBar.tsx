@@ -6,9 +6,11 @@ const StatusBar: React.FC = () => {
   const [title, setTitle] = useState('iPod');
   const activeTitle = useSelector((state: any) => state.title);
   const isPlaying = useSelector((state: any) => state.isPlaying);
+
   useEffect(() => {
     setTitle(activeTitle);
   }, [activeTitle]);
+
   return (
     <div className="status-bar">
       <div className="status">
