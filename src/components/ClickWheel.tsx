@@ -7,6 +7,7 @@ import {
   toggleMedia,
   unsetIsBack,
   setTrack,
+  unClick,
 } from '../actions';
 import nextButton from '../assets/img/next.png';
 import prevButton from '../assets/img/prev.png';
@@ -36,6 +37,7 @@ const Wheel: React.FC = () => {
     clickSound.play();
     dispatch(unsetIsBack());
     dispatch(clickWheel());
+    dispatch(unClick());
   }, [clickSound, dispatch]);
 
   const handleScroll = useCallback((e: any) => {

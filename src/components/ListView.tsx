@@ -33,8 +33,8 @@ const ListView: React.FC<Props> = (props) => {
         history.push(link);
         dispatch(savePlace(index));
       }
+      dispatch(unClick());
     }
-    dispatch(unClick());
   }, [clicked, dispatch, history, index, props, visible])
   /* ######################################################################### */
 

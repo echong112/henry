@@ -12,7 +12,7 @@ const App: React.FC = () => {
       <div className="ipod">
         {modal === true && (
           <div className="instructions">
-            <p>If you have a trackpad, please use the keys for the best experience</p>
+            <p>Use mouse wheel. If you have a trackpad, please use the keys for the best experience</p>
             <p>Up: <span>↑ Up Arrow </span></p>
             <p>Down: <span>↓ Down Arrow</span></p>
             <p>Select Item: <span>→ Right Arrow</span></p>
