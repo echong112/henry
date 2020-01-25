@@ -37,7 +37,6 @@ const Wheel: React.FC = () => {
     clickSound.play();
     dispatch(unsetIsBack());
     dispatch(clickWheel());
-    dispatch(unClick());
   }, [clickSound, dispatch]);
 
   const handleScroll = useCallback((e: any) => {
