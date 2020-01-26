@@ -15,7 +15,7 @@ const MenuItem: React.FC<Props> = (props) => {
 
   return (
     <Link
-      className={`menu-item ${props.isActive ? 'active' : ''} ${props.slug === 'nowplaying' ? 'now-playing' : ''} ${isPlaying ? 'playing' : ''}`}
+      className={`menu-item ${props.isActive ? 'active' : ''}`}
       to={{
         pathname: url,
         state: {

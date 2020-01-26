@@ -14,7 +14,7 @@ const Player = () => {
   // Listen changes in the track state from Redux
   useEffect(() => {
     if (track !== 0) {
-      let newIndex = (activeIndex + track) % (playlist.length - 1);
+      let newIndex = (activeIndex + track) % (playlist.length);
       setActiveIndex(newIndex);
       dispatch(stopMedia());
       setAudio(new Audio(`${winLoc}/audio/${playlist[Math.abs(newIndex)].slug}.mp3`));

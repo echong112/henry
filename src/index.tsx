@@ -5,9 +5,15 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
+import { createBrowserHistory } from 'history';
 
 const store = createStore(rootReducer);
-
+const history = createBrowserHistory();
+const path = (/#!(\/.*)$/.exec(window.location.hash) || [])[1];
+if (path) {
+    history.replace(path);
+}
+console.log(path);
 ReactDOM.render(
   <Provider store={store}>
     <App />
@@ -17,3 +23,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
