@@ -27,6 +27,7 @@ Redux was used to gather inputs from the click wheel and translate them into scr
 * Shuffle Songs
 * Extras 
 * Play Next
+* Componentize Single View Pages and inner templates
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 

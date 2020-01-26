@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link} from "react-router-dom";
-import { useSelector } from 'react-redux';
 
 interface Props {
   currItem: any;
@@ -11,7 +10,6 @@ interface Props {
 
 const MenuItem: React.FC<Props> = (props) => {
   const [url] = useState('/');
-  const isPlaying = useSelector((state: any) => state.isPlaying);
 
   return (
     <Link

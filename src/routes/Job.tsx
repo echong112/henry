@@ -31,15 +31,17 @@ const Job: React.FC = () => {
 
   return (
     <div className="page" ref={myPage => thisPage = myPage}>
-      <h3>{filtered.jobTitle}</h3>
-      <p>{filtered.title}</p>
-      <ul>
-        {filtered.tasks.map((task, j) => <li className="smaller-p" key={j}>{task}</li>)}
-      </ul>
-      <br />
-      {filtered.summary && (<p className="smaller-p">{filtered.summary}</p>)}
+      <div className="page-container">
+        <h3>{filtered.jobTitle}</h3>
+        <p>{filtered.title}</p>
+        <ul>
+          {filtered.tasks.map((task, j) => <li className="smaller-p" key={j}>{task}</li>)}
+        </ul>
+        <br />
+        {filtered.summary && (<p className="smaller-p">{filtered.summary}</p>)}
+      </div>
     </div>
-  )
+  );
 }
 
 export default Job;

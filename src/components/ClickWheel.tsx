@@ -7,7 +7,6 @@ import {
   toggleMedia,
   unsetIsBack,
   setTrack,
-  unClick,
 } from '../actions';
 import nextButton from '../assets/img/next.png';
 import prevButton from '../assets/img/prev.png';
