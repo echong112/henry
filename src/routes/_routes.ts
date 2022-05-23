@@ -97,6 +97,13 @@ export const jobs = [
 
 export const portfolio = [
   {
+    url: 'https://awful.ai',
+    title: 'awful.ai',
+    parent: 'portfolio',
+    slug: 'awful',
+    tech: 'React, node'
+  },
+  {
     url: 'https://www.boomerang.com',
     title: 'Boomerang.com',
     parent: 'portfolio',
@@ -296,10 +303,6 @@ export const mainList = [
   {
     title: 'Portfolio',
     slug: 'portfolio',
-  },
-  {
-    title: 'Extras',
-    slug: 'extras',
   },
   {
     title: 'Shuffle Songs',
