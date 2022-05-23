@@ -1,15 +1,16 @@
 export const jobs = [
   {
-    jobTitle: 'Senior Front End Engineer',
-    title: 'VaynerMedia',
-    slug: 'vaynermedia',
+    jobTitle: 'Senior Full Stack Engineer',
+    title: 'CNN',
+    slug: 'turner',
     parent: 'experience',
-    tenure: '8/2019 - 11/2019',
+    tenure: '2/2020 - Present',
     tasks: [
-      'Purge [usanetwork.com/thepurge/morningtimeamerica]',
-      'Sabra Super Bowl Sweepstakes'
+      'Courageous Video Directory [internal.cvd.courageousstudios.com]',
+      'Emi the Poet',
+      'Novartis Clinical Trials'
     ],
-    summary: 'Contractor front end developer. Created web applications in ReactJS using ES6 and AWS.'
+    summary: 'Lead developer. Created web apps and web infographics.'
   },
   {
     jobTitle: 'Front End Engineer',
@@ -22,7 +23,7 @@ export const jobs = [
       'DramaFever [www.dramafever.com]',
       'DC Universe [dcuniverse.com]'
     ],
-    summary: 'Lead Developer for boomerang.com web application rebuild. Revamped user checkout, cancellation, and resubscription flows. Updated site design along with new upsell and promotional features. Mentored junior developers with pair coding sessions. Sprint planning with stakeholders. Peer code reviews. Created components using ES6 for Vue.js, AngularJS, and ReactJS. Received feedback from senior developers.'
+    summary: 'Lead Developer for boomerang.com. Revamped user checkout, cancellation, and resubscription flows. Updated site design along with new upsell and promotional features. Mentored junior developers with pair coding sessions. Sprint planning with stakeholders. Peer code reviews. Created components using ES6 for Vue.js, AngularJS, and ReactJS. Received feedback from senior developers.'
   },
   {
     jobTitle: 'Senior Web Developer',
