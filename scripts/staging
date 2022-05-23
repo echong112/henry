@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+
+# if [ "$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')" != "staging" ]
+# then
+#   echo "Must be on staging branch to deploy to staging"
+#   exit 1
+# fi
+
+npm run build
+
+S3_BUCKET="s3://awful.ai"
+
+aws s3 sync --delete build/ $S3_BUCKET
+aws cloudfront create-invalidation --distribution-id EJ8G1CFL0BFEP --paths "/*"
