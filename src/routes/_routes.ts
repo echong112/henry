@@ -1,12 +1,11 @@
 export const jobs = [
   {
     jobTitle: 'Senior Full Stack Engineer',
-    title: 'CNN',
+    title: 'WarnerMedia',
     slug: 'turner',
     parent: 'experience',
     tenure: '2/2020 - Present',
     tasks: [
-      'Courageous Video Directory [internal.cvd.courageousstudios.com]',
       'Emi the Poet',
       'Novartis Clinical Trials'
     ],
