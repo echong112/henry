@@ -55,6 +55,32 @@ table {
   margin-top: 50px;
   border-radius: 25px;
   font-family: 'PT Sans', sans-serif;
+
+  @media only screen and (max-width: 1281px) {
+    // display: none;
+  }
+}
+
+.mobile {
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.75);
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  color: white;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: white;
+  }
+  @media only screen and (min-width: 990px) {
+    display: none;
+  }
 }
 
 .bezel {
@@ -393,11 +419,15 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  & >span {
+  & span {
     font-weight: bold;
   }
   & > p {
     padding-bottom: 10px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
   }
 
   .close-button {

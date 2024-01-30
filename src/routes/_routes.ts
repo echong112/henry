@@ -1,10 +1,34 @@
 export const jobs = [
   {
+    jobTitle: 'Technical Lead',
+    title: 'Clean Choice Energy',
+    slug: 'cleanchoie ',
+    parent: 'experience',
+    tenure: '6/2023 - 12/2023',
+    tasks: [
+      'Remix.run migration',
+      'Redis Caching'
+    ],
+    summary: 'Technical Lead for Front End team. Migrating from React to Remix.run. Implementing Redis caching. Sprint Planning'
+  },
+  {
+    jobTitle: 'Senior Software Engineer',
+    title: 'Walmart',
+    slug: 'walmart',
+    parent: 'experience',
+    tenure: '06/2022 - 06/2023',
+    tasks: [
+      'Item Page Team',
+      'Search Page Team'
+    ],
+    summary: 'Worked on high traffic modules for the walmart.com Search and Item page. Engaged in mentoring, led sprint planning sessions, and facilitated onboarding processes. Performed on-call duties to monitor network traffic.'
+  },
+  {
     jobTitle: 'Senior Full Stack Engineer',
-    title: 'WarnerMedia',
+    title: 'Warner Bros. Discovery',
     slug: 'turner',
     parent: 'experience',
-    tenure: '2/2020 - Present',
+    tenure: '02/2020 - 06/2022',
     tasks: [
       'Emi the Poet',
       'Novartis Clinical Trials'
@@ -16,7 +40,7 @@ export const jobs = [
     title: 'Warner Bros. Digital Labs',
     slug: 'warnerbros',
     parent: 'experience',
-    tenure: '7/2018 - 7/2019',
+    tenure: '07/2018 - 07/2019',
     tasks: [
       'Boomerang [www.boomerang.com]',
       'DramaFever [www.dramafever.com]',
@@ -26,7 +50,7 @@ export const jobs = [
   },
   {
     jobTitle: 'Senior Web Developer',
-    title: 'Edelman',
+    title: 'Edelman Digital',
     slug: 'edelman',
     parent: 'experience',
     tenure: '6/2017 - 12/2017',
@@ -52,8 +76,8 @@ export const jobs = [
     summary: 'Freelance consultant and developer for involved in all aspects of the business, including contract negotiations, development, planning, devops, deployment, and hosting. Worked with Edelman, Weber Shandwick, and other agencies to build web apps, CMS, and websites. Created custom plugins and themes for WordPress, Drupal, and Joomla. Shopify and Magento consulting. WooCommerce.'
   },
   {
-    jobTitle: 'Director of Carrier Data',
-    title: 'Vivaro Corporation',
+    jobTitle: 'Software Engineer',
+    title: 'Epana Networks',
     slug: 'vivaro',
     parent: 'experience',
     tenure: '6/2005 - 3/2011',
@@ -65,32 +89,6 @@ export const jobs = [
       
     ],
     summary: 'Freelance consultant and developer for involved in all aspects of the business, including contract negotiations, development, planning, devops, deployment, and hosting. Worked with Edelman, Weber Shandwick, and other agencies to build web apps, CMS, and websites. Created custom plugins and themes for WordPress, Drupal, and Joomla. Shopify and Magento consulting. WooCommerce.'
-  },
-  {
-    jobTitle: 'Web Developer',
-    title: 'Cartech, Inc.',
-    slug: 'cartech',
-    parent: 'experience',
-    tenure: '1/2003 - 6/2005',
-    tasks: [
-      'Increased sales using online channels',
-      'Designed and developed all websites',
-      'Managed SEO, SEM, and display advertising',
-      'Detected and prevented fraudulent transactions',
-    ],
-  },
-  {
-    jobTitle: 'Web Developer',
-    title: 'TAP Computer Services',
-    slug: 'tapcomputers',
-    parent: 'experience',
-    tenure: '6/2000 - 1/2003',
-    tasks: [
-      'Developed internal and client websites',
-      'Recommended hardware purchases for service contracts',
-      'Negotiated rates with parts contractors',
-     'Trained to repair and service Windows CE systems ',
-    ],
   }
 ];
 
